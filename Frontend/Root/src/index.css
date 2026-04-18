@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+@import "tailwindcss";
+@import "./responsive.css";
+
+@layer base {
+  :root {
+    --color-brand: #3d7a4f;
+    --color-brand-dark: #2d5c3b;
+    --color-brand-light: #e8f4ec;
+    --color-accent: #c8722a;
+    --color-accent-light: #fdf0e4;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Light theme */
+  body.light {
+    background-color: #fafaf9;
+    color: #1c1917;
+  }
+
+  /* Dark theme */
+  body.dark {
+    background-color: #181818;
+    color: #f0f4f1;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3d7a4f;
+    border-radius: 3px;
+  }
+}
+
+.site-loader-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(61, 122, 79, 0.12), transparent 26%),
+    #fafaf9;
+}
+
+.site-loader-shell .loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.site-loader-shell .loader::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #2a9d8f;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+
+.site-loader-shell .loader::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 7px;
+  width: 45px;
+  border-radius: 4px;
+  background: transparent;
+  box-shadow:
+    0 5px 0 #44403c,
+    -35px 50px 0 #44403c,
+    -70px 95px 0 #44403c;
+  animation: loading-step 1s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+  0% {
+    transform: scale(1, 0.7);
+  }
+  40% {
+    transform: scale(0.8, 1.2);
+  }
+  60% {
+    transform: scale(1, 1);
+  }
+  100% {
+    bottom: 140px;
+  }
+}
+
+@keyframes loading-step {
+  0% {
+    box-shadow:
+      0 10px 0 rgba(0, 0, 0, 0),
+      0 10px 0 #44403c,
+      -35px 50px 0 #44403c,
+      -70px 90px 0 #44403c;
+  }
+  100% {
+    box-shadow:
+      0 10px 0 #44403c,
+      -35px 50px 0 #44403c,
+      -70px 90px 0 #44403c,
+      -70px 90px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.grid-wrapper {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.grid-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+    linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+  background-size: 20px 30px;
+}
+
+.grid-background.pattern-ltr {
+  -webkit-mask-image: linear-gradient(to bottom right, #000 20%, transparent 80%);
+  mask-image: linear-gradient(to bottom right, #000 20%, transparent 80%);
+}
+
+.grid-background.pattern-rtl {
+  -webkit-mask-image: linear-gradient(to top left, #000 20%, transparent 80%);
+  mask-image: linear-gradient(to top left, #000 20%, transparent 80%);
+}
+
+.dark .grid-background, body.dark .grid-background {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+.program-card {
+  position: relative;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.program-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: var(--color-brand);
+  transition: width 0.4s ease;
+}
+
+.program-card:hover {
+  background-color: var(--color-brand-light) !important;
+  border-color: var(--color-brand) !important;
+}
+
+.dark .program-card:hover, body.dark .program-card:hover {
+  background-color: #242424 !important;
+  border-color: var(--color-brand-dark) !important;
+}
+
+.program-card:hover::after {
+  width: 100%;
+}
+
+.program-card .icon-wrapper {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.program-card:hover .icon-wrapper {
+  transform: translateY(-8px);
+  filter: brightness(0.8);
+}
+
+.dark .program-card:hover .icon-wrapper, body.dark .program-card:hover .icon-wrapper {
+  filter: brightness(1.2);
+}

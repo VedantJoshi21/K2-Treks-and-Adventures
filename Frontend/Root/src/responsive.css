@@ -1,0 +1,226 @@
+/* ============================================================
+   K2 Treks & Adventures — Global Responsive Stylesheet
+   Breakpoints:
+     sm  : max-width 640px   (phones)
+     md  : max-width 768px   (large phones / small tablets)
+     lg  : max-width 1024px  (tablets / small laptops)
+   ============================================================ */
+
+/* ── Navbar ─────────────────────────────────────────────── */
+
+/* Show hamburger on mobile, hide desktop nav */
+@media (max-width: 768px) {
+  .nav-desktop-links {
+    display: none !important;
+  }
+  .nav-hamburger {
+    display: flex !important;
+  }
+  /* Hide "Book a Trek" CTA pill in navbar on very small screens */
+  .nav-cta-pill {
+    display: none !important;
+  }
+}
+
+/* ── Hero Section ────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Shrink hero height so it doesn't feel giant on phones */
+  .hero-section {
+    min-height: 88vh !important;
+  }
+
+  /* Nav arrow buttons: smaller and pulled in from edge */
+  .hero-prev-btn,
+  .hero-next-btn {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    left: 0.75rem !important;
+  }
+  .hero-next-btn {
+    left: unset !important;
+    right: 0.75rem !important;
+  }
+
+  /* IAF badge: move below the top and reduce padding */
+  .hero-iaf-badge {
+    top: 1rem !important;
+    right: 1rem !important;
+    font-size: 10px !important;
+    padding: 6px 10px !important;
+  }
+
+  /* Hero content text block */
+  .hero-content {
+    padding: 0 1rem !important;
+  }
+
+  /* Slide dot indicators: tighten spacing */
+  .hero-indicators {
+    bottom: 1rem !important;
+    gap: 0.35rem !important;
+  }
+
+  /* Text slide container: lower min-height on mobile */
+  .hero-text-slides {
+    min-height: 240px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-slides {
+    min-height: 270px !important;
+  }
+
+  /* Hero CTA buttons stack naturally since flex + flexWrap is already set */
+  .hero-cta-group a {
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* ── Stats Bar ───────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .stats-bar {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── About Section ───────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Floating rating badge: position inside the image, not outside */
+  .about-rating-badge {
+    bottom: 12px !important;
+    left: 12px !important;
+  }
+}
+
+/* ── Enquiry Form ────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  /* Stack the 2-column form rows into 1 column */
+  .enquiry-form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce form card padding */
+  .enquiry-form-card {
+    padding: 1.5rem 1.25rem !important;
+  }
+}
+
+/* ── Trek Cards Grid ─────────────────────────────────────── */
+
+.treks-slider {
+  scroll-padding-inline: 0;
+  touch-action: pan-x;
+}
+
+.treks-slide {
+  flex: 0 0 calc((100% - 3rem) / 3) !important;
+  width: calc((100% - 3rem) / 3) !important;
+  min-width: 0 !important;
+}
+
+@media (max-width: 1024px) {
+  .treks-slide {
+    flex-basis: calc((100% - 1.5rem) / 2) !important;
+    width: calc((100% - 1.5rem) / 2) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .treks-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .treks-slider {
+    scroll-padding-inline: 0 !important;
+    padding-inline: 0 !important;
+  }
+
+  .treks-slide {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    scroll-snap-align: start !important;
+  }
+
+  .treks-nav-btn {
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+  }
+
+  .treks-nav-btn-prev {
+    left: 0.5rem !important;
+  }
+
+  .treks-nav-btn-next {
+    right: 0.5rem !important;
+  }
+}
+
+/* ── Programs Section ────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .programs-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Reviews Section ─────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Contact Section ─────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .footer-links {
+    gap: 2rem !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* ── General Section Padding ─────────────────────────────── */
+
+@media (max-width: 640px) {
+  .section-pad {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+}
+
+/* ── Utility: prevent horizontal scroll everywhere ───────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
