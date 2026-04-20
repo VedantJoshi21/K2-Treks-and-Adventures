@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DifficultyBadge from './DifficultyBadge';
 import { MapPinIcon, ClockIcon, StarIcon } from './Icons';
 
@@ -64,17 +65,30 @@ export default function TrekCard({ trek, darkMode }) {
             <span style={{ marginLeft: '4px' }}>{trek.rating} ({trek.reviews})</span>
           </span>
         </div>
-        <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '0.25rem' }}>
-          <a href="#enquiry" style={{
-            background: '#3d7a4f', color: '#fff', padding: '8px 18px',
-            borderRadius: '999px', fontSize: '13px', fontWeight: 600,
-            textDecoration: 'none', transition: 'background 0.2s ease',
-          }}
-            onMouseEnter={e => e.currentTarget.style.background = '#2d5c3b'}
-            onMouseLeave={e => e.currentTarget.style.background = '#3d7a4f'}
-          >
-            Enquire Now
-          </a>
+        <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', paddingTop: '0.25rem' }}>
+          {trek.slug ? (
+            <Link to={`/trek/${trek.slug}`} style={{
+              background: '#3d7a4f', color: '#fff', padding: '8px 18px',
+              borderRadius: '999px', fontSize: '13px', fontWeight: 600,
+              textDecoration: 'none', transition: 'background 0.2s ease',
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = '#2d5c3b'}
+              onMouseLeave={e => e.currentTarget.style.background = '#3d7a4f'}
+            >
+              View Details
+            </Link>
+          ) : (
+            <a href="#enquiry" style={{
+              background: '#3d7a4f', color: '#fff', padding: '8px 18px',
+              borderRadius: '999px', fontSize: '13px', fontWeight: 600,
+              textDecoration: 'none', transition: 'background 0.2s ease',
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = '#2d5c3b'}
+              onMouseLeave={e => e.currentTarget.style.background = '#3d7a4f'}
+            >
+              Enquire Now
+            </a>
+          )}
         </div>
       </div>
     </div>

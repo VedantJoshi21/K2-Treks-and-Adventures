@@ -179,7 +179,7 @@ export default function HeroSection({ darkMode }) {
       {/* Hero Content */}
       <div className="hero-content" style={{
         position: 'relative', zIndex: 1, textAlign: 'center',
-        padding: '0 1.5rem', maxWidth: '820px', margin: '0 auto',
+        padding: '0 1rem', maxWidth: '1000px', margin: '0 auto',
       }}>
         {/* <div style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',

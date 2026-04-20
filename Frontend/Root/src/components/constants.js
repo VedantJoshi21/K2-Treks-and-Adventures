@@ -5,6 +5,7 @@ export const sahyadriTreks = [
   {
     id: 1,
     title: "Harishchandragad Fort Trek",
+    slug: "harishchandragad",
     location: "Ahmednagar, Maharashtra",
     difficulty: "Hard",
     duration: "2 Days",
@@ -17,6 +18,7 @@ export const sahyadriTreks = [
   {
     id: 2,
     title: "Kalsubai Peak Trek",
+    slug: "kalsubai",
     location: "Nashik, Maharashtra",
     difficulty: "Moderate",
     duration: "1 Day",
@@ -116,6 +118,7 @@ export const himalayanTreks = [
   {
     id: 4,
     title: "Valley of Flowers Trek",
+    slug: "valley-of-flowers",
     location: "Uttarakhand, India",
     difficulty: "Moderate",
     duration: "6 Days",
@@ -240,28 +243,28 @@ export const programs = [
     title: "High Altitude Mountaineering",
     desc: "Guided expeditions to Himalayan high-altitude peaks. Expert training, acclimatization protocols, and world-class safety gear provided.",
     features: ["Expert guides", "Equipment provided", "Acclimatization plan"],
-    image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=600&q=80",
+    image: "https://bekkcjkhrsfqwznxidkg.supabase.co/storage/v1/object/public/blog-images/10209-769a0fe8-3e36-4270-95ab-f1dcf8517584-6651cb810322c6c9fd2bbd4d50e29b9d.jpg",
   },
   {
     icon: React.createElement(Map, { size: 48, strokeWidth: 1.5 }),
     title: "Everest Base Camp",
     desc: "Flagship trek combining cultural immersion with extreme altitude challenge, guided by experienced leaders with a strong focus on safety and pacing.",
     features: ["Khumbu trail support", "Acclimatization guidance", "Expedition logistics"],
-    image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?auto=format&fit=crop&w=600&q=80",
+    image: "https://d26dp53kz39178.cloudfront.net/media/uploads/products/2_5_usGCLou.jpg",
   },
   {
     icon: React.createElement(Snowflake, { size: 48, strokeWidth: 1.5 }),
     title: "Skiing Training",
     desc: "Kids and adult programs in Jammu & Kashmir focused on building confidence, technique, and winter sports endurance in alpine conditions.",
     features: ["Beginner to advanced coaching", "Snow safety basics", "Seasonal training camps"],
-    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=600&q=80",
+    image: "https://cdn.prod.website-files.com/5f5777504c01823e93e92c7b/610115541416d6f203f0702c_which-month-is-best-to-go-skiing.jpg",
   },
   {
     icon: React.createElement(Compass, { size: 48, strokeWidth: 1.5 }),
     title: "Custom Expeditions",
     desc: "Tailored programs for defence institutes, schools, and corporate groups with mission-specific objectives, structure, and field execution.",
     features: ["Custom route planning", "Objective-based modules", "Group coordination support"],
-    image: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=600&q=80",
+    image: "https://completewellbeing.com/wp-content/uploads/2014/04/discover-the-beauty-of-trekking.jpg",
   },
 ];
 
@@ -291,32 +294,52 @@ export const reviews = [
 
 export const whyUsFeatures = [
   {
-    eyebrow: "01 / LOGISTICS",
-    title: "UNCOMPROMISING SAFETY",
-    desc: "Military-grade satellite communication, on-call specialized high-altitude physicians, and a 1:1 guide-to-client ratio for institutional partners.",
-    image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1200",
+    eyebrow: "01 / APPROACH",
+    title: "SAFETY FIRST",
+    desc: [
+      "Highest safety standards in adventure industry",
+      "Registered with Maharashtra Tourism Department",
+      "Professionally trained and experienced team",
+      "Comprehensive risk management protocols"
+    ],
+    image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=1200",
     cta: "EXPLORE PROTOCOL"
   },
   {
-    eyebrow: "02 / METHODOLOGY",
-    title: "PSYCHOLOGICAL FRAMING",
-    desc: "Our curriculum uses the mountain as a laboratory for behavioral economics, stress management, and complex decision-making under pressure.",
-    image: "https://images.unsplash.com/photo-1617791160301-22c1ecad6ca6?auto=format&fit=crop&q=80&w=1200",
-    cta: "VIEW METHODOLOGY"
+    eyebrow: "02 / LEADERSHIP",
+    title: "EXPERT TEAM",
+    desc: [
+      "Internationally experienced trainers",
+      "Defence background leadership",
+      "Medical and emergency response training",
+      "Continuous professional development"
+    ],
+    image: "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&q=80&w=1200",
+    cta: "MEET THE TEAM"
   },
   {
-    eyebrow: "03 / STEWARDSHIP",
-    title: "GLOBAL SUSTAINABILITY",
-    desc: "Carbon-negative expeditions and a direct investment model that supports local Sherpa infrastructure and Himalayan environmental protection.",
-    image: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=1200",
-    cta: "CHARTER DETAILS"
+    eyebrow: "03 / CAPABILITY",
+    title: "GOVERNMENT READY",
+    desc: [
+      "Active on GeM Portal",
+      "Experience with defence projects",
+      "Institutional program expertise",
+      "Transparent billing and compliance"
+    ],
+    image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=1200",
+    cta: "VIEW CREDENTIALS"
   },
   {
-    eyebrow: "04 / OPERATIONS",
-    title: "ELITE LOGISTICS",
-    desc: "Seamless integration of private helicopter transport, executive-tier base camp amenities, and cloud-synced project management for all treks.",
-    image: "https://images.unsplash.com/photo-1614850553958-3cc32f352932?auto=format&fit=crop&q=80&w=1200",
-    cta: "OPERATIONS PORTAL"
+    eyebrow: "04 / COMMUNITY",
+    title: "SOCIAL COMMITMENT",
+    desc: [
+      "Special concessions for defence personnel",
+      "Discounts for NCC cadets",
+      "Support for farmers and families",
+      "Community development initiatives"
+    ],
+    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=1200",
+    cta: "OUR IMPACT"
   },
 ];
 

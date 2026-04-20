@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function ProgramsSection({ theme, programs, id = "programs", title = "Specialized Programs", description = "Corporate, institutional, and specialized adventure training programs — designed with military-grade structure.", showGridPattern, variant = "specialized" }) {
   return (
-    <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1.5rem' }}>
+    <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <h2 style={{
             fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
@@ -25,7 +25,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             position: relative;
             width: 100%;
             min-height: 500px;
-            border-radius: 2rem;
+            border-radius: 0.75rem;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
@@ -41,26 +41,32 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             inset: 0;
             width: 100%; height: 100%;
             object-fit: cover;
-            transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+            object-position: center;
+            filter: brightness(1.1) contrast(1.05) saturate(1.1);
+            transform: scale(1);
+            transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
           }
-          .sp-card:hover .sp-card-bg { transform: scale(1.08); }
+          .sp-card:hover .sp-card-bg { 
+            transform: scale(1.1); 
+            filter: brightness(1.2) contrast(1.1) saturate(1.2);
+          }
 
           .sp-card-overlay {
             position: absolute; inset: 0;
             background: linear-gradient(
               110deg,
-              rgba(5,15,8,0.97) 0%,
-              rgba(5,15,8,0.77) 48%,
-              rgba(5,15,8,0.30) 100%
+              rgba(5,15,8,0.85) 0%,
+              rgba(5,15,8,0.60) 48%,
+              rgba(5,15,8,0.15) 100%
             );
             transition: background 0.5s ease;
           }
           .sp-card:hover .sp-card-overlay {
             background: linear-gradient(
               110deg,
-              rgba(5,15,8,1.0) 0%,
-              rgba(5,15,8,0.81) 48%,
-              rgba(5,15,8,0.33) 100%
+              rgba(5,15,8,0.92) 0%,
+              rgba(5,15,8,0.70) 48%,
+              rgba(5,15,8,0.25) 100%
             );
           }
 
@@ -105,12 +111,14 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             line-height: 1.1;
             letter-spacing: -0.04em;
             margin-bottom: 1.25rem;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
           }
           .sp-card-desc {
-            color: rgba(255,255,255,0.68);
+            color: rgba(255,255,255,0.88);
             font-size: 1rem;
             line-height: 1.85;
             max-width: 420px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
           }
 
           /* Vertical divider */

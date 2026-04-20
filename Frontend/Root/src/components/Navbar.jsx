@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import { MountainIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon, InstagramIcon, YouTubeIcon, FacebookIcon } from './Icons';
 
 export default function Navbar({
@@ -9,9 +10,15 @@ export default function Navbar({
   navLinks,
   theme
 }) {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
+    if (!isHomePage) {
+      setActiveSection('');
+      return;
+    }
     const handleScroll = () => {
       const sections = navLinks.map(link => link.href.substring(1));
       let current = '';
@@ -52,16 +59,25 @@ export default function Navbar({
         position: 'sticky', top: 0, zIndex: 100,
         background: theme.navBg, backdropFilter: 'blur(12px)',
         borderBottom: `1px solid ${theme.border}`,
-        padding: '0 1.5rem', height: '64px',
+        padding: '0 1rem', height: '64px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
         {/* Logo */}
-        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: theme.text }}>
+        <Link 
+          to="/" 
+          onClick={(e) => { 
+            if (isHomePage) {
+              e.preventDefault(); 
+              window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            }
+          }} 
+          style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: theme.text }}
+        >
           <MountainIcon className="w-8 h-8" style={{ color: '#3d7a4f', width: '2rem', height: '2rem' }} />
           <span style={{ fontSize: '1.3rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
             K2 <span style={{ color: '#3d7a4f' }}>Treks & Adventures</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav — hidden on mobile via .nav-desktop-links class */}
         <div
@@ -71,10 +87,11 @@ export default function Navbar({
           {navLinks.map(link => {
             const linkId = link.href.substring(1);
             const isActive = activeSection === linkId;
+            const to = isHomePage ? link.href : `/${link.href}`;
             return (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={to}
                 className={`nav-link ${isActive ? 'active' : ''}`}
                 style={{
                   color: isActive ? '#3d7a4f' : theme.subtext, 
@@ -84,7 +101,7 @@ export default function Navbar({
                 }}
               >
                 {link.label}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -137,16 +154,17 @@ export default function Navbar({
         <div style={{
           position: 'fixed', top: '64px', left: 0, right: 0,
           background: theme.navBg, backdropFilter: 'blur(16px)',
-          borderBottom: `1px solid ${theme.border}`, zIndex: 99, padding: '1.5rem',
+          borderBottom: `1px solid ${theme.border}`, zIndex: 99, padding: '1rem',
           display: 'flex', flexDirection: 'column', gap: '1.25rem',
         }}>
           {navLinks.map(link => {
             const linkId = link.href.substring(1);
             const isActive = activeSection === linkId;
+            const to = isHomePage ? link.href : `/${link.href}`;
             return (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={to}
                 onClick={() => setMobileMenuOpen(false)}
                 style={{ 
                   color: isActive ? '#3d7a4f' : theme.text, 
@@ -156,7 +174,7 @@ export default function Navbar({
                 }}
               >
                 {link.label}
-              </a>
+              </Link>
             );
           })}
           {/* Show "Book a Trek" inside the mobile menu */}

@@ -4,11 +4,11 @@ import { StarIcon } from './Icons';
 export default function ReviewsSection({ theme, darkMode, reviews, showGridPattern }) {
   return (
     <section id="reviews" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '6rem 1.5rem',
+      padding: '6rem 1rem',
       background: darkMode ? 'rgba(255,255,255,0.02)' : '#f5f5f4',
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
           <h2 style={{

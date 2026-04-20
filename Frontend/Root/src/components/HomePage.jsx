@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
+import React, { useState } from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import WhyUsSection from './WhyUsSection';
@@ -10,7 +9,6 @@ import EnquirySection from './EnquirySection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
 
-import { getTheme } from './theme';
 import {
   sahyadriTreks,
   himalayanTreks,
@@ -20,39 +18,12 @@ import {
   reviews,
 } from './constants';
 
-export default function HomePage() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function HomePage({ darkMode, setDarkMode, theme }) {
   const [activeTab, setActiveTab] = useState('sahyadri');
 
-  // Apply theme to body
-  useEffect(() => {
-    document.body.className = darkMode ? 'dark' : 'light';
-  }, [darkMode]);
-
-  const navLinks = [
-    { label: 'Home', href: '#hero' },
-    { label: 'Our Treks', href: '#treks' },
-    { label: 'Speicalized Programs', href: '#programs' },
-    { label: 'Corporate Trainings', href: '#corporate' },
-    { label: 'Our Story', href: '#about' },
-    { label: 'Why Us', href: '#whyus' },
-    { label: 'Trekker Stories', href: '#reviews' },
-    { label: 'Book a Trek', href: '#enquiry' },
-  ];
-
-  const theme = getTheme(darkMode);
-
   return (
-    <div style={{ background: theme.bg, color: theme.text, minHeight: '100vh', transition: 'background 0.3s, color 0.3s' }}>
-      <Navbar
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-        mobileMenuOpen={mobileMenuOpen}
-        setMobileMenuOpen={setMobileMenuOpen}
-        navLinks={navLinks}
-        theme={theme}
-      />
+    <>
+
       <HeroSection darkMode={darkMode} />
       <TreksSection
         theme={theme}
@@ -104,6 +75,6 @@ export default function HomePage() {
           .md\\:hidden-hamburger { display: flex !important; }
         }
       `}</style>
-    </div>
+    </>
   );
 }

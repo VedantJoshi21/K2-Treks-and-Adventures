@@ -4,11 +4,11 @@ import { PhoneIcon, MailIcon, MapPinIcon } from './Icons';
 export default function ContactSection({ theme, darkMode, showGridPattern }) {
   return (
     <section id="contact" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '6rem 1.5rem',
+      padding: '6rem 1rem',
       background: darkMode ? 'rgba(255,255,255,0.02)' : '#f5f5f4',
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
           <h2 style={{
@@ -26,7 +26,7 @@ export default function ContactSection({ theme, darkMode, showGridPattern }) {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '1.5rem',
-          maxWidth: '800px', margin: '0 auto',
+          maxWidth: '1000px', margin: '0 auto',
         }}>
           {[
             { icon: <PhoneIcon />, label: 'Phone', value: '+91 9209548856', href: 'tel:+919209548856' },
