@@ -10,14 +10,7 @@ export default function AboutSection({ theme, darkMode, showGridPattern }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           {/* Text */}
         <div>
-          <span style={{
-            display: 'inline-block', background: '#e8f4ec', color: '#3d7a4f',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Our Story
-          </span>
+
           <h2 style={{
             fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
             lineHeight: 1.15, marginBottom: '1.25rem', letterSpacing: '-0.02em',

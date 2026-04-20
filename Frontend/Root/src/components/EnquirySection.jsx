@@ -24,14 +24,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '720px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            display: 'inline-block', background: '#fdf0e4', color: '#c8722a',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Start Your Journey
-          </span>
+
           <h2 style={{
             fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
             lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,

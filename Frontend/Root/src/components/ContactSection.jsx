@@ -10,14 +10,7 @@ export default function ContactSection({ theme, darkMode, showGridPattern }) {
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            display: 'inline-block', background: '#e8f4ec', color: '#3d7a4f',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Get in Touch
-          </span>
+
           <h2 style={{
             fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
             lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,

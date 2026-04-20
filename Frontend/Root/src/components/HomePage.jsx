@@ -67,8 +67,7 @@ export default function HomePage() {
         theme={theme} 
         programs={programs} 
         id="programs" 
-        subtitle="Specialized Expeditions" 
-        title="Speicalized Programs" 
+        title="Specialized Programs" 
         description="Expert-led high-altitude mountaineering and specialized adventure training programs." 
         showGridPattern="rtl"
       />
@@ -76,10 +75,10 @@ export default function HomePage() {
         theme={theme} 
         programs={corporatePrograms} 
         id="corporate" 
-        subtitle="Custom Solutions" 
         title="Corporate & Institutional Programs" 
         description="Structured leadership, team-building, and survival programs designed with military-grade structure." 
         showGridPattern="ltr"
+        variant="corporate"
       />
       <AboutSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <WhyUsSection theme={theme} features={whyUsFeatures} showGridPattern="ltr" />

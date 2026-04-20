@@ -216,18 +216,21 @@ export const corporatePrograms = [
     title: "Corporate Outbound",
     desc: "Structured leadership and team-building programs for corporate groups. Build trust, communication and resilience through curated outdoor challenges.",
     features: ["Custom itineraries", "Team assessment", "Post-event reports"],
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
   },
   {
     icon: React.createElement(GraduationCap, { size: 48, strokeWidth: 1.5 }),
     title: "Institutional / School Programs",
     desc: "Safe, educative adventure programs for schools and colleges across India. NCC-style disciplined camps aligned with educational objectives.",
     features: ["Age-appropriate challenges", "Safety-first approach", "Certificate of completion"],
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
   },
   {
     icon: React.createElement(ShieldAlert, { size: 48, strokeWidth: 1.5 }),
     title: "Survival & Wilderness Training",
     desc: "IAF-veteran led specialized survival training for individuals seeking real-world outdoor skills under controlled, professional supervision.",
     features: ["Bushcraft skills", "Navigation training", "Emergency first aid"],
+    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/ASCAN_2021_Class_Wilderness_Survival_Training_%289%29.jpg",
   },
 ];
 
@@ -237,24 +240,28 @@ export const programs = [
     title: "High Altitude Mountaineering",
     desc: "Guided expeditions to Himalayan high-altitude peaks. Expert training, acclimatization protocols, and world-class safety gear provided.",
     features: ["Expert guides", "Equipment provided", "Acclimatization plan"],
+    image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=600&q=80",
   },
   {
     icon: React.createElement(Map, { size: 48, strokeWidth: 1.5 }),
     title: "Everest Base Camp",
     desc: "Flagship trek combining cultural immersion with extreme altitude challenge, guided by experienced leaders with a strong focus on safety and pacing.",
     features: ["Khumbu trail support", "Acclimatization guidance", "Expedition logistics"],
+    image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?auto=format&fit=crop&w=600&q=80",
   },
   {
     icon: React.createElement(Snowflake, { size: 48, strokeWidth: 1.5 }),
     title: "Skiing Training",
     desc: "Kids and adult programs in Jammu & Kashmir focused on building confidence, technique, and winter sports endurance in alpine conditions.",
     features: ["Beginner to advanced coaching", "Snow safety basics", "Seasonal training camps"],
+    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=600&q=80",
   },
   {
     icon: React.createElement(Compass, { size: 48, strokeWidth: 1.5 }),
     title: "Custom Expeditions",
     desc: "Tailored programs for defence institutes, schools, and corporate groups with mission-specific objectives, structure, and field execution.",
     features: ["Custom route planning", "Objective-based modules", "Group coordination support"],
+    image: "https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
@@ -284,40 +291,32 @@ export const reviews = [
 
 export const whyUsFeatures = [
   {
-    title: "Safety First Approach",
-    points: [
-      "Highest safety standards in adventure industry",
-      "Registered with Maharashtra Tourism Department",
-      "Professionally trained and experienced team",
-      "Comprehensive risk management protocols",
-    ],
+    eyebrow: "01 / LOGISTICS",
+    title: "UNCOMPROMISING SAFETY",
+    desc: "Military-grade satellite communication, on-call specialized high-altitude physicians, and a 1:1 guide-to-client ratio for institutional partners.",
+    image: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?auto=format&fit=crop&q=80&w=1200",
+    cta: "EXPLORE PROTOCOL"
   },
   {
-    title: "Expert Team",
-    points: [
-      "Internationally experienced trainers",
-      "Defence background leadership",
-      "Medical and emergency response training",
-      "Continuous professional development",
-    ],
+    eyebrow: "02 / METHODOLOGY",
+    title: "PSYCHOLOGICAL FRAMING",
+    desc: "Our curriculum uses the mountain as a laboratory for behavioral economics, stress management, and complex decision-making under pressure.",
+    image: "https://images.unsplash.com/photo-1617791160301-22c1ecad6ca6?auto=format&fit=crop&q=80&w=1200",
+    cta: "VIEW METHODOLOGY"
   },
   {
-    title: "Government Ready",
-    points: [
-      "Active on GeM Portal",
-      "Experience with defence projects",
-      "Institutional program expertise",
-      "Transparent billing and compliance",
-    ],
+    eyebrow: "03 / STEWARDSHIP",
+    title: "GLOBAL SUSTAINABILITY",
+    desc: "Carbon-negative expeditions and a direct investment model that supports local Sherpa infrastructure and Himalayan environmental protection.",
+    image: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=1200",
+    cta: "CHARTER DETAILS"
   },
   {
-    title: "Social Commitment",
-    points: [
-      "Special concessions for defence personnel",
-      "Discounts for NCC cadets",
-      "Support for farmers and families",
-      "Community development initiatives",
-    ],
+    eyebrow: "04 / OPERATIONS",
+    title: "ELITE LOGISTICS",
+    desc: "Seamless integration of private helicopter transport, executive-tier base camp amenities, and cloud-synced project management for all treks.",
+    image: "https://images.unsplash.com/photo-1614850553958-3cc32f352932?auto=format&fit=crop&q=80&w=1200",
+    cta: "OPERATIONS PORTAL"
   },
 ];
 
