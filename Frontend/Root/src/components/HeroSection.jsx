@@ -170,7 +170,7 @@ export default function HeroSection({ darkMode }) {
         background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(8px)',
         border: '1px solid rgba(255,255,255,0.2)',
         padding: '8px 16px', borderRadius: '999px',
-        color: '#fff', fontSize: '12px', fontWeight: 700,
+        color: '#fff', fontSize: '14px', fontWeight: 700,
         display: 'flex', alignItems: 'center', gap: '6px',
       }}>
         <span>✦</span> Founded by an IAF Veteran

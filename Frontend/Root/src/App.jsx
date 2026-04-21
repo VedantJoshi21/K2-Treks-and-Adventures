@@ -4,6 +4,9 @@ import HomePage from './components/HomePage';
 import SiteLoader from './components/SiteLoader';
 import ScrollToTop from './components/ScrollToTop';
 import Harishchandragad from './components/Trek_Pages/Harishchandragad';
+import KonkanCoastal from './components/Trek_Pages/KonkanCoastal';
+import KalsubaiSandhan from './components/Trek_Pages/KalsubaiSandhan';
+import RatangadSandhan from './components/Trek_Pages/RatangadSandhan';
 import Navbar from './components/Navbar';
 import { getTheme } from './components/theme';
 
@@ -71,6 +74,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
           <Route path="/trek/harishchandragad" element={<Harishchandragad darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/konkan-coastal-tour" element={<KonkanCoastal darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/kalsubai-sandhan-valley" element={<KalsubaiSandhan darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/ratangad-sandhan-valley" element={<RatangadSandhan darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
         </Routes>
       </div>
     </BrowserRouter>
