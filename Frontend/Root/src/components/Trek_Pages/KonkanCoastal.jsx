@@ -117,60 +117,40 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
         </div>
       </section>
 
-      {/* Highlights Section */}
-      <section style={{ padding: '12rem 1.5rem 6rem', maxWidth: '1440px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '6rem', alignItems: 'center' }}>
+      {/* Intro Section */}
+      <section style={{ padding: '8rem 1.5rem 4rem', maxWidth: '1440px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, letterSpacing: '-0.02em', color: '#3d7a4f', marginBottom: '2rem' }}>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#3d7a4f', marginBottom: '1.5rem' }}>
               Coastal Magic & Spiritual Serenity
             </h2>
-            <p style={{ color: theme.subtext, lineHeight: 1.8, fontSize: '1.15rem', marginBottom: '2.5rem' }}>
-              Experience the best of Konkan with our curated 7-day tour. From the historic Mahalaxmi Temple in Kolhapur to the turquoise waters of Devbag Sangam, this journey is designed to rejuvenate your soul.
+            <p style={{ color: theme.subtext, lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '2rem' }}>
+              Experience the best of Konkan with our curated 7-day tour. From the historic Mahalaxmi Temple in Kolhapur to the turquoise waters of Devbag Sangam, this journey is designed to rejuvenate your soul through sun, sand, and spirituality.
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {[
-                { title: 'Beaches & Sunsets', desc: 'Visit Ganpatipule, Aare Ware Beach, and Tarkarli for pristine sands and breathtaking orange horizons.', icon: <Sunset size={24} /> },
-                { title: 'Water Sports & Scuba', desc: 'Dive into the Arabian Sea with included Scuba Diving and optional jet ski adventures at Malvan.', icon: <Waves size={24} /> },
-                { title: 'Cultural Immersion', desc: 'Seek blessings at Mahalaxmi Temple and Ganpatipule Temple while enjoying authentic local cuisine.', icon: <Compass size={24} /> },
+                { title: 'Beaches & Sunsets', desc: 'Visit Ganpatipule, Aare Ware Beach, and Tarkarli for pristine sands and breathtaking orange horizons.', icon: <CheckCircle2 size={20} color="#3d7a4f" /> },
+                { title: 'Water Sports & Scuba', desc: 'Dive into the Arabian Sea with included Scuba Diving and witness the vibrant marine life of Malvan.', icon: <CheckCircle2 size={20} color="#3d7a4f" /> },
+                { title: 'Cultural Immersion', desc: 'Seek blessings at the ancient Mahalaxmi and Ganpatipule temples while enjoying authentic local Malvani cuisine.', icon: <CheckCircle2 size={20} color="#3d7a4f" /> },
               ].map(item => (
-                <div key={item.title} style={{ display: 'flex', gap: '1.25rem' }}>
-                  <div style={{ 
-                    minWidth: '48px', height: '48px', background: 'rgba(61,122,79,0.1)', 
-                    borderRadius: '12px', display: 'flex', alignItems: 'center', 
-                    justifyContent: 'center', color: '#3d7a4f' 
-                  }}>
-                    {item.icon}
-                  </div>
+                <div key={item.title} style={{ display: 'flex', gap: '1rem' }}>
+                  <div style={{ marginTop: '0.25rem' }}>{item.icon}</div>
                   <div>
-                    <h4 style={{ fontWeight: 800, fontSize: '1.2rem', marginBottom: '0.4rem' }}>{item.title}</h4>
-                    <p style={{ fontSize: '1rem', color: theme.subtext, lineHeight: 1.6 }}>{item.desc}</p>
+                    <h4 style={{ fontWeight: 800, marginBottom: '0.25rem' }}>{item.title}</h4>
+                    <p style={{ fontSize: '0.95rem', color: theme.subtext, lineHeight: 1.5 }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
           
-          <div style={{ position: 'relative' }}>
-            <div style={{ 
-              position: 'absolute', top: '-10%', left: '-10%', width: '40%', height: '40%', 
-              background: 'rgba(61,122,79,0.1)', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', 
-              zIndex: -1 
-            }}></div>
-            <img 
-              src="https://images.unsplash.com/photo-1544735038-17546e0443d6?auto=format&fit=crop&w=800&q=80" 
-              alt="Konkan Coast" 
-              style={{ width: '100%', borderRadius: '2rem', boxShadow: '0 30px 60px rgba(0,0,0,0.15)' }} 
-            />
-            <div style={{ 
-              position: 'absolute', bottom: '-2rem', right: '2rem', 
-              background: '#3d7a4f', color: '#fff', padding: '1.5rem', 
-              borderRadius: '1rem', boxShadow: '0 20px 40px rgba(61,122,79,0.3)',
-              maxWidth: '200px'
-            }}>
-              <StarIcon size={24} />
-              <div style={{ fontWeight: 800, marginTop: '0.5rem' }}>4.8/5 Rating</div>
-              <div style={{ fontSize: '0.8rem', opacity: 0.9 }}>from 120+ happy travelers</div>
+          <div style={{ position: 'relative', display: 'flex', gap: '1rem' }}>
+            <div style={{ flex: 1, paddingTop: '4rem' }}>
+              <img src="https://www.traveltrendstoday.in/storage/posts/8337c9a3a911760255c845b8b563ed95.jpg" alt="Konkan Coast" style={{ width: '100%', borderRadius: '1.5rem', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
+            </div>
+            <div style={{ flex: 1 }}>
+              <img src="https://www.ganpatipule.co.in/images/slider/7.jpg" alt="Ganpatipule Temple" style={{ width: '100%', borderRadius: '1.5rem', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }} />
             </div>
           </div>
         </div>
@@ -178,46 +158,46 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
 
       {/* Pricing Section */}
       <section style={{ 
-        padding: '6rem 1.5rem', 
+        padding: '3.8rem 1.5rem', 
         background: darkMode ? 'rgba(61,122,79,0.1)' : 'rgba(61,122,79,0.03)',
-        margin: '4rem 0',
+        margin: '2.5rem 0',
         position: 'relative'
       }}>
         <div style={{ maxWidth: '1440px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '4rem', letterSpacing: '-0.02em' }}>Investment for Memories</h2>
+          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, marginBottom: '2.5rem', letterSpacing: '-0.02em' }}>Investment for Memories</h2>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ 
-              background: theme.cardBg, padding: '3.5rem', borderRadius: '2rem',
-              width: '100%', maxWidth: '500px',
+              background: theme.cardBg, padding: '2.2rem', borderRadius: '2rem',
+              width: '100%', maxWidth: '320px',
               border: `1px solid ${theme.border}`, boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
               position: 'relative', overflow: 'hidden'
             }}>
               <div style={{ 
-                position: 'absolute', top: '2rem', right: '-2.5rem', 
-                background: '#dc2626', color: '#fff', padding: '8px 40px', 
-                transform: 'rotate(45deg)', fontSize: '0.8rem', fontWeight: 900,
+                position: 'absolute', top: '1.3rem', right: '-1.6rem', 
+                background: '#dc2626', color: '#fff', padding: '5px 26px', 
+                transform: 'rotate(45deg)', fontSize: '0.55rem', fontWeight: 900,
                 letterSpacing: '0.1em'
               }}>Special Offer</div>
               
-              <h3 style={{ color: '#3d7a4f', fontWeight: 800, fontSize: '1.1rem', marginBottom: '1.5rem', letterSpacing: '0.1em' }}>COST OF INVESTMENT</h3>
-              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                <span style={{ fontSize: '1.5rem', color: theme.subtext, textDecoration: 'line-through' }}>₹11,599</span>
-                <span style={{ fontSize: '4.5rem', fontWeight: 900, color: theme.text }}>₹10,999</span>
+              <h3 style={{ color: '#3d7a4f', fontWeight: 800, fontSize: '0.75rem', marginBottom: '0.95rem', letterSpacing: '0.1em' }}>COST OF INVESTMENT</h3>
+              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '0.8rem', marginBottom: '0.8rem' }}>
+                <span style={{ fontSize: '0.8rem', color: theme.subtext, textDecoration: 'line-through' }}>₹11,599</span>
+                <span style={{ fontSize: '1.6rem', fontWeight: 900, color: theme.text }}>₹10,999</span>
               </div>
-              <p style={{ color: theme.subtext, marginBottom: '2.5rem' }}>per person (Offer Price)</p>
+              <p style={{ color: theme.subtext, fontSize: '0.85rem', marginBottom: '0.8rem' }}>per person (Offer Price)</p>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1.6rem' }}>
                 {['Sleeper Train Tickets Included', 'All Road Transfers', 'Accommodation (Triple/Quad)', 'Scuba Diving Experience'].map(f => (
-                  <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', justifyContent: 'center' }}>
-                    <CheckCircle2 size={18} color="#3d7a4f" />
-                    <span style={{ fontWeight: 600 }}>{f}</span>
+                  <div key={f} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center' }}>
+                    <CheckCircle2 size={14} color="#3d7a4f" />
+                    <span style={{ fontWeight: 600, fontSize: '0.8rem' }}>{f}</span>
                   </div>
                 ))}
               </div>
               
               <a href="#enquiry" style={{ 
                 display: 'block', background: '#3d7a4f', color: '#fff', 
-                padding: '1.25rem', borderRadius: '1rem', fontWeight: 800, 
+                padding: '0.8rem', borderRadius: '0.65rem', fontWeight: 800, 
                 textDecoration: 'none', transition: 'all 0.3s'
               }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
                 Book Now with 70% Deposit
@@ -228,116 +208,257 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Itinerary Section */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
-          <h2 style={{ fontSize: '3rem', fontWeight: 900, marginBottom: '1rem' }}>The 7-Day Voyage</h2>
-          <p style={{ color: theme.subtext, fontSize: '1.1rem' }}>A day-by-day breakdown of your coastal adventure</p>
+      <section style={{ padding: '4rem 1.5rem', background: theme.bg, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ color: '#3d7a4f', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>THE PATH FORWARD</div>
+          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, letterSpacing: '-0.02em' }}>Curated Itinerary</h2>
         </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          {[
-            { day: 'Day 1', title: 'Wardha → Kolhapur', desc: 'Departure by sleeper train for an overnight journey.', icon: <Bus /> },
-            { day: 'Day 2', title: 'Kolhapur Sightseeing', desc: 'Arrival & hotel check-in. Visit Mahalaxmi Temple & Rankala Lake. Night stay at Kolhapur.', icon: <Compass /> },
-            { day: 'Day 3', title: 'Kolhapur → Ganpatipule', desc: 'Travel by Non-AC bus. Visit Ganpatipule Temple, Aare Ware Beach & Table Point. Sunset view. Night stay at Ganpatipule.', icon: <Sunset /> },
-            { day: 'Day 4', title: 'Ganpatipule → Malvan', desc: 'Travel to Malvan, hotel check-in, and leisure time for beach walks. Night stay at Malvan.', icon: <Waves /> },
-            { day: 'Day 5', title: 'Tarkarli & Devbag', desc: 'Visit Tarkarli Beach & Devbag Sangam. Scuba Diving experience included. Night departure for Kolhapur.', icon: <Waves /> },
-            { day: 'Day 6', title: 'Kolhapur → Wardha', desc: 'Arrival at Kolhapur & board return train for overnight journey.', icon: <Ship /> },
-            { day: 'Day 7', title: 'Arrival at Wardha', desc: 'Tour ends with happy memories.', icon: <ArrowLeft /> },
-          ].map((item, idx) => (
-            <motion.div 
-              key={item.day}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              style={{ 
-                display: 'flex', gap: '2rem', background: theme.cardBg, 
-                padding: '2rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}`,
-                alignItems: 'center'
-              }}
-            >
-              <div style={{ 
-                fontSize: '1.5rem', fontWeight: 900, color: '#3d7a4f', 
-                minWidth: '80px', textAlign: 'center' 
+        
+        <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
+          {/* Central Vertical Line (Desktop Only) */}
+          <div className="timeline-line" style={{ 
+            position: 'absolute', left: '50%', transform: 'translateX(-50%)', 
+            top: 0, bottom: 0, width: '2px', borderLeft: '2px dashed #3d7a4f',
+            opacity: 0.3, zIndex: 0 
+          }}></div>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+            {[
+              { 
+                day: 'DAY 01', 
+                title: 'Wardha → Kolhapur', 
+                desc: 'Departure by sleeper train for an overnight journey towards the historic city of Kolhapur.',
+                points: [{ label: 'Board Sleeper Train', icon: <Bus size={16} /> }],
+                image: 'https://www.railway-technology.com/wp-content/uploads/sites/13/2023/08/Don-Mammoser-Jaipur.jpg',
+                reverse: false 
+              },
+              { 
+                day: 'DAY 02', 
+                title: 'Kolhapur Sightseeing', 
+                desc: 'Arrival at Kolhapur. Visit the legendary Mahalaxmi Temple & relax by Rankala Lake.',
+                points: [{ label: 'Mahalaxmi Temple Visit', icon: <Compass size={16} /> }, { label: 'Evening at Rankala Lake', icon: <Sunset size={16} /> }],
+                image: 'https://tanushreecabs.com/wp-content/uploads/2025/03/Mahalaxmi-Temple-Kolhapur--1024x768.webp',
+                reverse: true 
+              },
+              { 
+                day: 'DAY 03', 
+                title: 'Kolhapur → Ganpatipule', 
+                desc: 'Journey to the coastal town of Ganpatipule via the scenic Aare Ware coastal road.',
+                points: [{ label: 'Ganpatipule Temple', icon: <Compass size={16} /> }, { label: 'Sunset at Table Point', icon: <Sunset size={16} /> }],
+                image: 'https://www.ganpatipule.co.in/images/slider/7.jpg',
+                reverse: false 
+              },
+              { 
+                day: 'DAY 04', 
+                title: 'Ganpatipule → Malvan', 
+                desc: 'Scenic drive to Malvan, check-in at hotel and enjoy local Malvani cuisine and beach walks.',
+                points: [{ label: 'Coastal Road Trip', icon: <Route size={16} /> }, { label: 'Leisure at Malvan Beach', icon: <Waves size={16} /> }],
+                image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+                reverse: true 
+              },
+              { 
+                day: 'DAY 05', 
+                title: 'Tarkarli & Scuba Adventure', 
+                desc: 'Dive into the Arabian Sea with included Scuba Diving. Visit Tarkarli Beach and Devbag Sangam.',
+                points: [{ label: 'Scuba Diving (Included)', icon: <Waves size={16} /> }, { label: 'Tarkarli Beach Activities', icon: <Ship size={16} /> }],
+                image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80',
+                reverse: false 
+              },
+              { 
+                day: 'DAY 06 & 07', 
+                title: 'Return Journey', 
+                desc: 'Board return train from Kolhapur. Arrival at Wardha with happy coastal memories.',
+                points: [{ label: 'Board Return Train', icon: <Ship size={16} /> }, { label: 'Tours Ends at Wardha', icon: <ArrowLeft size={16} /> }],
+                image: 'https://thumbs.dreamstime.com/b/mumbai-india-october-suburban-train-cst-station-railway-chhatrapati-shivaji-terminus-415025614.jpg',
+                reverse: true 
+              },
+            ].map((item, idx) => (
+              <div key={item.day} style={{ 
+                display: 'flex', flexWrap: item.reverse ? 'wrap-reverse' : 'wrap', alignItems: 'center', 
+                gap: '2rem', position: 'relative', zIndex: 1 
               }}>
-                {item.day}
+                {/* Day Marker */}
+                <div style={{ 
+                  position: 'absolute', left: '50%', transform: 'translateX(-50%)',
+                  width: '10px', height: '10px', borderRadius: '50%', background: '#3d7a4f',
+                  boxShadow: '0 0 0 6px rgba(61,122,79,0.1)', top: '10px'
+                }} className="timeline-marker"></div>
+  
+                {!item.reverse ? (
+                  <>
+                    <div style={{ flex: '1 1 350px', textAlign: 'right', paddingRight: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
+                      <div style={{ 
+                        display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                        fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
+                        borderRadius: '999px', marginBottom: '1rem' 
+                      }}>{item.day}</div>
+                      <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{item.title}</h3>
+                      <p style={{ color: theme.subtext, lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem', maxWidth: '400px', marginLeft: 'auto' }}>
+                        {item.desc}
+                      </p>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-end' }}>
+                        {item.points.map(point => (
+                          <div key={point.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                            <span style={{ fontWeight: 600, fontSize: '0.9rem', color: theme.subtext }}>{point.label}</span>
+                            <div style={{ 
+                              width: '32px', height: '32px', background: 'rgba(61,122,79,0.1)', 
+                              borderRadius: '6px', display: 'flex', alignItems: 'center', 
+                              justifyContent: 'center', color: '#3d7a4f' 
+                            }}>
+                              {point.icon}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div style={{ flex: '1 1 350px', paddingLeft: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-image-side">
+                      <div style={{ position: 'relative' }}>
+                        <img src={item.image} alt={item.title} style={{ 
+                          width: '100%', borderRadius: '1.5rem', boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2)',
+                          transform: 'rotate(1.5deg)'
+                        }} />
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div style={{ flex: '1 1 350px', paddingRight: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-image-side">
+                      <div style={{ position: 'relative' }}>
+                        <img src={item.image} alt={item.title} style={{ 
+                          width: '100%', borderRadius: '1.5rem', boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.2)',
+                          transform: 'rotate(-1.5deg)'
+                        }} />
+                      </div>
+                    </div>
+                    <div style={{ flex: '1 1 350px', textAlign: 'left', paddingLeft: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
+                      <div style={{ 
+                        display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                        fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
+                        borderRadius: '999px', marginBottom: '1rem' 
+                      }}>{item.day}</div>
+                      <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '1rem' }}>{item.title}</h3>
+                      <p style={{ color: theme.subtext, lineHeight: 1.6, marginBottom: '1.5rem', fontSize: '0.95rem', maxWidth: '400px' }}>
+                        {item.desc}
+                      </p>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'flex-start' }}>
+                        {item.points.map(point => (
+                          <div key={point.label} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                            <div style={{ 
+                              width: '32px', height: '32px', background: 'rgba(61,122,79,0.1)', 
+                              borderRadius: '6px', display: 'flex', alignItems: 'center', 
+                              justifyContent: 'center', color: '#3d7a4f' 
+                            }}>
+                              {point.icon}
+                            </div>
+                            <span style={{ fontWeight: 600, fontSize: '0.9rem', color: theme.subtext }}>{point.label}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
-              <div style={{ width: '2px', height: '50px', background: 'rgba(61,122,79,0.2)' }}></div>
-              <div>
-                <h4 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem' }}>{item.title}</h4>
-                <p style={{ color: theme.subtext, lineHeight: 1.6 }}>{item.desc}</p>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Inclusions & Exclusions */}
+      {/* Tour Logistics & Essentials */}
       <section style={{ padding: '6rem 1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
           
-          <div style={{ background: 'rgba(61,122,79,0.05)', padding: '3rem', borderRadius: '2rem' }}>
-            <h3 style={{ fontSize: '1.75rem', fontWeight: 900, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <CheckCircle2 color="#3d7a4f" /> What's Included
+          {/* Essentials Column */}
+          <div style={{ background: darkMode ? 'rgba(255,255,255,0.03)' : '#fff', padding: '2.5rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <Info size={24} color="#3d7a4f" /> Tour Essentials
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {[
-                'Sleeper Train Travel (Wardha–Kolhapur–Wardha)',
-                'Road Transport (Complete Tour)',
-                'Professional Tour Manager',
-                'Meals: Day 2 (B&D), Day 3-6 (B&L)',
-                'Accommodation (Triple/Quad Sharing)',
-                'Scuba Diving Experience 🤿',
-                'First Aid Facility',
-                'Campfire & DJ Night 🎶🔥'
-              ].map(i => (
-                <div key={i} style={{ display: 'flex', gap: '0.75rem', fontSize: '1.05rem' }}>
-                  <div style={{ color: '#3d7a4f' }}>•</div> {i}
-                </div>
-              ))}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+              <div>
+                <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', color: '#3d7a4f' }}>WHAT TO PACK</div>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  {[
+                    'Lightweight Cotton Clothes',
+                    'Beachwear & Extra Pair of Footwear',
+                    'Sunscreen, Sunglasses & Hat',
+                    'Personal Toiletries & Medications',
+                    'Waterproof Bag for Mobile/Camera'
+                  ].map(e => (
+                    <li key={e} style={{ fontSize: '0.9rem', display: 'flex', gap: '0.75rem' }}>
+                       <div style={{ minWidth: '20px' }}>•</div> {e}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', color: '#3d7a4f' }}>PREPARATION TIPS</div>
+                <p style={{ fontSize: '0.9rem', color: theme.subtext, lineHeight: 1.6 }}>
+                  Keep your ID cards ready for temple entries. Stay hydrated throughout the coastal journey. Inform the guide beforehand for any specific dietary requirements.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div style={{ background: 'rgba(220, 38, 38, 0.05)', padding: '3rem', borderRadius: '2rem' }}>
-            <h3 style={{ fontSize: '1.75rem', fontWeight: 900, marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <AlertCircle color="#dc2626" /> What's Excluded
-            </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {[
-                'Mineral Water & Beverages',
-                'Personal Expenses',
-                'Optional Water Sports (Jet Ski, Banana Ride, etc.)',
-                'Sindhudurg Fort Entry & Ferry Charges',
-                'Anything not mentioned in Inclusions'
-              ].map(i => (
-                <div key={i} style={{ display: 'flex', gap: '0.75rem', fontSize: '1.05rem' }}>
-                  <div style={{ color: '#dc2626' }}>•</div> {i}
-                </div>
-              ))}
+          {/* Inclusions / Exclusions Column */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div style={{ background: darkMode ? 'rgba(61,122,79,0.1)' : 'rgba(61,122,79,0.05)', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#3d7a4f' }}>
+                <CheckCircle2 size={22} /> What's Included
+              </h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                {[
+                  'Sleeper Train Travel',
+                  'Road Transport',
+                  'Tour Manager',
+                  'Accommodation',
+                  'Scuba Diving',
+                  'First Aid',
+                  'Campfire & DJ Night'
+                ].map(inc => (
+                  <span key={inc} style={{ 
+                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
+                    boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+                  }}>
+                    {inc}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ background: darkMode ? 'rgba(220, 38, 38, 0.1)' : 'rgba(220, 38, 38, 0.05)', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#dc2626' }}>
+                <AlertCircle size={22} /> What's Excluded
+              </h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                {[
+                  'Mineral Water',
+                  'Personal Expenses',
+                  'Water Sports',
+                  'Fort Entry Fees',
+                  'Unmentions'
+                ].map(exc => (
+                  <span key={exc} style={{ 
+                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
+                    boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+                  }}>
+                    {exc}
+                  </span>
+                ))}
+              </div>
+            </div>
+            
+            <div style={{ padding: '1.5rem', border: '1px dashed #3d7a4f', borderRadius: '1rem' }}>
+              <div style={{ fontWeight: 800, fontSize: '0.85rem', color: '#3d7a4f', marginBottom: '0.5rem' }}>TOUR POLICIES</div>
+              <p style={{ fontSize: '0.85rem', color: theme.subtext }}>
+                💳 70% at booking, 30% before departure.
+                <br/>
+                🕒 Cancellation: 20 days (60% refund), 10 days (45%), 7 days (30%).
+              </p>
             </div>
           </div>
-        </div>
 
-        {/* Additional Policies */}
-        <div style={{ 
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: '2rem', marginTop: '3rem' 
-        }}>
-          <div style={{ background: theme.cardBg, padding: '2rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
-            <h4 style={{ fontWeight: 800, fontSize: '1.1rem', marginBottom: '1rem', color: '#3d7a4f' }}>PAYMENT TERMS</h4>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li style={{ fontWeight: 600 }}>• 70% at booking time</li>
-              <li style={{ fontWeight: 600 }}>• 30% before departure</li>
-            </ul>
-          </div>
-          <div style={{ background: theme.cardBg, padding: '2rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
-            <h4 style={{ fontWeight: 800, fontSize: '1.1rem', marginBottom: '1rem', color: '#dc2626' }}>CANCELLATION POLICY</h4>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem', fontSize: '0.9rem' }}>
-              <li>• 20 days before: 60% refund</li>
-              <li>• 10 days before: 45% refund</li>
-              <li>• 7 days before: 30% refund</li>
-              <li>• Less than 7 days: No refund</li>
-            </ul>
-          </div>
         </div>
       </section>
 
@@ -378,6 +499,23 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
         showGridPattern="ltr"
       />
       <Footer theme={theme} darkMode={darkMode} />
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        section {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+        @media (max-width: 768px) {
+          .timeline-line, .timeline-marker { display: none !important; }
+          .itinerary-text-side { text-align: left !important; padding: 0 !important; }
+          .itinerary-text-side p { margin-left: 0 !important; }
+          .itinerary-text-side div { align-items: flex-start !important; }
+          .itinerary-image-side { padding: 0 !important; margin-top: 1rem; }
+        }
+      `}</style>
     </>
   );
 }

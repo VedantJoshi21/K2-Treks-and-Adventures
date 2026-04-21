@@ -1,8 +1,12 @@
 import React from 'react';
 
 export default function ProgramsSection({ theme, programs, id = "programs", title = "Specialized Programs", description = "Corporate, institutional, and specialized adventure training programs — designed with military-grade structure.", showGridPattern, variant = "specialized" }) {
+  const isCorp = variant === 'corporate';
+  const sectionBg = isCorp ? '#fcf9f5' : 'transparent';
+
   return (
-    <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem' }}>
+    <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} 
+      style={{ padding: '6rem 1rem', background: sectionBg, position: 'relative' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
@@ -188,111 +192,104 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           }
 
           /* ========= CORPORATE: Editorial Split Layout ========= */
-          .corp-layout { display: flex; flex-direction: column; gap: 3rem; }
-
-          .corp-row {
-            display: flex;
-            align-items: stretch;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            min-height: 360px;
-            background: ${theme.cardBg};
-            border: 1px solid ${theme.border};
-            box-shadow: 0 4px 32px rgba(0,0,0,0.07);
-            transition: box-shadow 0.4s ease, transform 0.4s ease;
-          }
-          .corp-row:hover {
-            box-shadow: 0 16px 56px rgba(61,122,79,0.13);
-            transform: translateY(-4px);
+          /* ========= CORPORATE: Staggered Editorial Grid ========= */
+          .corp-layout { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 2.5rem; 
+            padding: 4rem 0 2rem;
+            align-items: start;
           }
 
-          .corp-img-panel {
-            flex: 0 0 42%;
-            overflow: hidden;
-            position: relative;
-          }
-          .corp-img-panel img {
-            width: 100%; height: 100%; object-fit: cover;
-            transition: transform 0.85s cubic-bezier(0.2,0.8,0.2,1);
-            display: block;
-          }
-          .corp-row:hover .corp-img-panel img { transform: scale(1.06); }
-
-          .corp-content-panel {
-            flex: 1;
-            padding: 3rem 3.5rem;
+          .corp-card {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 0;
+            background: transparent;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+          }
+
+          /* Staggered offset for middle card */
+          @media (min-width: 901px) {
+            .corp-card:nth-child(2) {
+              transform: translateY(-3.5rem);
+            }
+          }
+
+          .corp-img-box {
+            width: 100%;
+            aspect-ratio: 1 / 1.1;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          }
+          .corp-img-box img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.8s ease;
+          }
+          .corp-card:hover .corp-img-box img {
+            transform: scale(1.05);
+          }
+
+          .corp-content-box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            text-align: left;
           }
 
           .corp-eyebrow {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #3d7a4f;
-            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
           }
 
-          .corp-content-panel h3 {
-            font-size: clamp(1.55rem, 2.8vw, 2.1rem);
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 1rem;
+          .corp-card h3 {
+            font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
             color: ${theme.text};
+            margin: 0.25rem 0;
           }
-          .corp-content-panel p {
+          .corp-card p {
             color: ${theme.subtext};
-            line-height: 1.8;
-            font-size: 0.97rem;
-            margin-bottom: 1.75rem;
-            max-width: 380px;
-          }
-
-          .corp-tags {
-            display: flex; gap: 8px; flex-wrap: wrap;
-            margin-bottom: 1.75rem;
-          }
-          .corp-tag {
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid ${theme.border};
-            color: ${theme.subtext};
-            font-size: 11.5px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            background: transparent;
-            transition: border-color 0.25s, color 0.25s, background 0.25s;
-          }
-          .corp-row:hover .corp-tag {
-            border-color: #3d7a4f;
-            color: #3d7a4f;
+            line-height: 1.75;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
           }
 
           .corp-cta {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             color: #3d7a4f;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
-            transition: gap 0.25s ease;
-            letter-spacing: 0.01em;
+            transition: gap 0.3s ease;
           }
-          .corp-cta:hover { gap: 12px; }
+          .corp-cta:hover { gap: 14px; }
           .corp-cta svg {
-            width: 16px; height: 16px;
-            transition: transform 0.25s ease;
+            width: 18px; height: 18px;
+            transition: transform 0.3s ease;
           }
-          .corp-cta:hover svg { transform: translateX(3px); }
+          .corp-cta:hover svg { transform: translateX(4px); }
 
           /* ========= Responsive ========= */
           @media (max-width: 900px) {
+            .corp-layout { 
+              grid-template-columns: 1fr; 
+              gap: 4rem; 
+              padding: 2rem 0;
+            }
+            .corp-img-box { aspect-ratio: 16/10; }
             .sp-card-body {
               grid-template-columns: 1fr;
               padding: 2.5rem;
@@ -305,32 +302,25 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             .sp-card-divider { display: none; }
             .sp-card-num { font-size: 5rem; top: 0.25rem; left: 1.25rem; }
             .sp-card-desc { max-width: 100%; }
-
-            .corp-row { flex-direction: column; min-height: auto; }
-            .corp-img-panel { flex: none; height: 260px; }
-            .corp-content-panel { padding: 2rem 1.75rem; }
           }
         `}</style>
 
         {variant === 'corporate' ? (
           <div className="corp-layout">
             {programs.map((prog, i) => {
-              const categoryLabel = i === 0 ? 'Programs' : i === 1 ? 'Education' : 'Training';
-              const ctaLabel = i === 0 ? 'Explore Methodology' : i === 1 ? 'View Curriculum' : 'View Training Plan';
+              const categoryLabel = i === 0 ? 'Logistics' : i === 1 ? 'Methodology' : 'Stewardship';
+              const ctaLabel = i === 1 ? 'The Science' : i === 2 ? 'Impact Report' : 'Explore Protocols';
               return (
-                <div key={i} className="corp-row">
-                  <div className="corp-img-panel">
+                <div key={i} className="corp-card">
+                  <div className="corp-img-box">
                     {prog.image && <img src={prog.image} alt={prog.title} loading="lazy" />}
                   </div>
-                  <div className="corp-content-panel">
-                    <div className="corp-eyebrow">{String(i + 1).padStart(2, '0')} / {categoryLabel}</div>
+                  <div className="corp-content-box">
+                    <div className="corp-eyebrow">
+                      {String(i + 1).padStart(2, '0')} / {categoryLabel}
+                    </div>
                     <h3>{prog.title}</h3>
                     <p>{prog.desc}</p>
-                    <div className="corp-tags">
-                      {prog.features.map((f, j) => (
-                        <span key={j} className="corp-tag">{f}</span>
-                      ))}
-                    </div>
                     <a href="#enquiry" className="corp-cta">
                       {ctaLabel}
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
