@@ -1,74 +1,140 @@
 import React from 'react';
+import { ShieldCheck, Brain, Leaf, Network, AlignCenter } from 'lucide-react';
 
 export default function WhyUsSection({ theme, features, showGridPattern }) {
+  // Map index to specific icon to match the image
+  const getIcon = (index) => {
+    switch (index) {
+      case 0: return <ShieldCheck size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 1: return <Brain size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 2: return <Leaf size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 3: return <Network size={24} color="#285c3b" strokeWidth={2.5} />;
+      default: return <ShieldCheck size={24} color="#285c3b" strokeWidth={2.5} />;
+    }
+  };
+
   return (
-    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1.5rem', background: theme.bg }}>
+    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '1.5rem 1rem', background: theme.bg }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            display: 'inline-block', background: '#fdf0e4', color: '#c8722a',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Why Us
-          </span>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+        <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text, textAlign: 'center'
           }}>
-            Why Partner With K2 Treks?
+            Why Partner With <span style={{ color: '#3d7a4f' }}>K2 Treks?</span>
           </h2>
         </div>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: '1.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
         }}>
           {features.map((feature, i) => (
             <div
               key={i}
+              className="why-card"
               style={{
+                display: 'flex',
+                flexDirection: 'column',
                 background: theme.cardBg,
-                border: `1px solid ${theme.border}`,
-                borderRadius: '1rem',
-                padding: '2rem',
-                position: 'relative',
+                borderRadius: '0.5rem',
                 overflow: 'hidden',
-                transition: 'transform 0.25s, box-shadow 0.25s',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 16px 40px rgba(0,0,0,0.1)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
+                transition: 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
               }}
             >
-              <div style={{ 
-                position: 'absolute', top: 0, left: 0, width: '4px', height: '100%', 
-                background: '#3d7a4f', borderTopLeftRadius: '1rem', borderBottomLeftRadius: '1rem' 
-              }}></div>
-              
-              <h3 style={{ fontWeight: 800, fontSize: '1.25rem', marginBottom: '1.25rem', color: theme.text, paddingLeft: '8px' }}>
-                {feature.title}
-              </h3>
-              
-              <ul style={{ listStyle: 'none', padding: '0 0 0 8px', margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                {feature.points.map((point, j) => (
-                  <li key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: theme.subtext, lineHeight: 1.6 }}>
-                    <span style={{ color: '#3d7a4f', fontSize: '1rem', lineHeight: '1.6', marginTop: '-2px' }}>•</span> 
-                    {point}
-                  </li>
-                ))}
-              </ul>
+              {/* Image Container */}
+              <div style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '100%',
+                background: '#000',
+              }}>
+                <img 
+                  src={feature.image} 
+                  alt={feature.title} 
+                  style={{ 
+                    position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', 
+                    objectFit: 'cover', transition: 'transform 0.6s ease' 
+                  }}
+                  className="why-image"
+                />
+              </div>
+
+              {/* Content */}
+              <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem', flex: 1 }}>
+                {/* <div style={{ marginBottom: '1rem' }}>
+                  {getIcon(i)}
+                </div> */}
+                
+                <h3 style={{ 
+                  fontWeight: 800, fontSize: '1.25rem', letterSpacing: '0', 
+                  color: theme.text, textTransform: 'uppercase', margin: '0 0 1rem 0',
+                  lineHeight: 1.3, textAlign: 'center'
+                }}>
+                  {feature.title}
+                </h3>
+                
+                <div style={{ margin: '0 0 2rem 0', flex: 1 }}>
+                  {Array.isArray(feature.desc) ? (
+                    <ul style={{ 
+                      fontSize: '0.9rem', color: theme.subtext, lineHeight: 1.6, 
+                      margin: 0, paddingLeft: '1.1rem',
+                      listStyleType: 'disc'
+                    }}>
+                      {feature.desc.map((item, idx) => (
+                        <li key={idx} style={{ marginBottom: '0.25rem' }}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p style={{ 
+                      fontSize: '0.9rem', color: theme.subtext, lineHeight: 1.6, 
+                      margin: 0
+                    }}>
+                      {feature.desc}
+                    </p>
+                  )}
+                </div>
+
+                <a 
+                  href="#enquiry" 
+                  style={{ 
+                    display: 'inline-block',
+                    fontSize: '0.9rem', fontWeight: 800, color: '#285c3b', 
+                    textDecoration: 'none', letterSpacing: '0.05em',
+                    textTransform: 'uppercase', marginTop: 'auto', textAlign: 'center'
+                  }}
+                  className="why-cta"
+                >
+                  {feature.cta}
+                </a>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        .why-card:hover {
+          transform: translateY(-5px);
+        }
+        .why-card:hover .why-image {
+          transform: scale(1.03);
+        }
+        @media (max-width: 1024px) {
+           div[style*="gridTemplateColumns"] {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+          }
+        }
+        @media (max-width: 768px) {
+           div[style*="gridTemplateColumns"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -5,48 +5,68 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
   const [formData, setFormData] = useState({
     name: '', email: '', phone: '', trek: '', message: '', date: '',
   });
-  const [formStatus, setFormStatus] = useState(null); // 'success' | null
+  const [formStatus, setFormStatus] = useState(null); // 'loading' | 'success' | 'error' | null
 
   const handleFormChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // No backend yet — simulate success
-    setFormStatus('success');
-    setFormData({ name: '', email: '', phone: '', trek: '', message: '', date: '' });
-    setTimeout(() => setFormStatus(null), 5000);
+    setFormStatus('loading');
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "dd4caefa-3fab-4991-b7a9-405631d4eda3",
+          subject: `New Trek Enquiry: ${formData.trek} from ${formData.name}`,
+          from_name: "K2 Treks & Adventures Enquiry",
+          ...formData
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', phone: '', trek: '', message: '', date: '' });
+        setTimeout(() => setFormStatus(null), 8000);
+      } else {
+        console.error("Web3Forms submission failed:", result);
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error("Form submission network/client error:", error);
+      setFormStatus('error');
+    }
   };
 
   return (
-    <section id="enquiry" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1.5rem' }}>
+    <section id="enquiry" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '3.5rem 1rem' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '720px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+      <div style={{ maxWidth: '880px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            display: 'inline-block', background: '#fdf0e4', color: '#c8722a',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Start Your Journey
-          </span>
+
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text,
           }}>
-            Book a Trek / Enquire
+            Book <span style={{ color: '#3d7a4f' }}>a Trek</span>
           </h2>
           <p style={{ color: theme.subtext, maxWidth: '480px', margin: '1rem auto 0', lineHeight: 1.7 }}>
             Fill out the form below and our team will get back to you within 24 hours with all the details and availability.
           </p>
         </div>
 
-        {/* Success Message */}
+        {/* Form Messages */}
         {formStatus === 'success' && (
           <div style={{
-            background: '#e8f4ec', border: '1px solid #3d7a4f',
+            background: '#faf2ee', border: '1px solid #3d7a4f',
             borderRadius: '1rem', padding: '1.25rem 1.75rem',
             display: 'flex', alignItems: 'center', gap: '12px',
             marginBottom: '2rem', color: '#2d5c3b',
@@ -56,14 +76,27 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           </div>
         )}
 
+        {formStatus === 'error' && (
+          <div style={{
+            background: '#fee2e2', border: '1px solid #dc2626',
+            borderRadius: '1rem', padding: '1.25rem 1.75rem',
+            display: 'flex', alignItems: 'center', gap: '12px',
+            marginBottom: '2rem', color: '#991b1b',
+          }}>
+            <span style={{ fontSize: '20px' }}>⚠️</span>
+            <span style={{ fontWeight: 600 }}>Something went wrong. Please try again or contact us directly.</span>
+          </div>
+        )}
+
         {/* Form */}
         <form
           onSubmit={handleFormSubmit}
           className="enquiry-form-card"
           style={{
             background: theme.cardBg, border: `1px solid ${theme.border}`,
-            borderRadius: '1.5rem', padding: '2.5rem',
+            borderRadius: '0rem', padding: '2.5rem',
             display: 'grid', gap: '1.25rem',
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
           }}
           id="enquiry-form"
         >
@@ -217,19 +250,46 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           <button
             type="submit"
             id="enquiry-submit-btn"
+            disabled={formStatus === 'loading'}
             style={{
               width: '100%', padding: '15px',
-              background: '#3d7a4f', color: '#fff',
+              background: formStatus === 'loading' ? '#6b9e7b' : '#3d7a4f',
+              color: '#faf2ee',
               border: 'none', borderRadius: '10px',
-              fontWeight: 800, fontSize: '1rem', cursor: 'pointer',
+              fontWeight: 800, fontSize: '1rem',
+              cursor: formStatus === 'loading' ? 'not-allowed' : 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               transition: 'background 0.2s, transform 0.15s',
               boxShadow: '0 4px 20px rgba(61,122,79,0.35)',
+              opacity: formStatus === 'loading' ? 0.8 : 1,
             }}
-            onMouseEnter={e => { e.currentTarget.style.background = '#2d5c3b'; e.currentTarget.style.transform = 'scale(1.01)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = '#3d7a4f'; e.currentTarget.style.transform = 'scale(1)'; }}
+            onMouseEnter={e => {
+              if (formStatus !== 'loading') {
+                e.currentTarget.style.background = '#2d5c3b';
+                e.currentTarget.style.transform = 'scale(1.01)';
+              }
+            }}
+            onMouseLeave={e => {
+              if (formStatus !== 'loading') {
+                e.currentTarget.style.background = '#3d7a4f';
+                e.currentTarget.style.transform = 'scale(1)';
+              }
+            }}
           >
-            <SendIcon /> Submit Enquiry
+            {formStatus === 'loading' ? (
+              <>
+                <span className="loading-spinner" style={{
+                  width: '18px', height: '18px', border: '2px solid #fff',
+                  borderTopColor: 'transparent', borderRadius: '50%',
+                  animation: 'spin 0.8s linear infinite'
+                }}></span>
+                Sending...
+              </>
+            ) : (
+              <>
+                <SendIcon /> Submit Enquiry
+              </>
+            )}
           </button>
         </form>
       </div>

@@ -4,26 +4,20 @@ import StatsBar from './StatsBar';
 
 export default function AboutSection({ theme, darkMode, showGridPattern }) {
   return (
-    <section id="about" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1.5rem' }}>
+    <section id="about" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '3.5rem 1rem' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           {/* Text */}
         <div>
-          <span style={{
-            display: 'inline-block', background: '#e8f4ec', color: '#3d7a4f',
-            padding: '4px 14px', borderRadius: '999px',
-            fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em',
-            marginBottom: '1rem', textTransform: 'uppercase',
-          }}>
-            Our Story
-          </span>
+
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, marginBottom: '1.25rem', letterSpacing: '-0.02em',
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, marginBottom: '1.25rem', letterSpacing: '-0.05em',
             color: theme.text,
           }}>
-            Built on Discipline,<br />Driven by Passion.
+            Built on <span style={{ color: '#3d7a4f' }}>Discipline,</span><br />
+            Driven by <span style={{ color: '#3d7a4f' }}>Passion.</span>
           </h2>
           <p style={{ color: theme.subtext, lineHeight: 1.8, marginBottom: '1rem' }}>
             K2 Treks &amp; Adventures is founded by an <strong style={{ color: '#3d7a4f' }}>Indian Air Force Veteran, Mr. Rakesh Kale</strong> with a vision to bring the discipline, precision, and spirit of service into adventure tourism. Based in Central Maharashtra, we operate <strong>PAN-India</strong>.
@@ -48,12 +42,12 @@ export default function AboutSection({ theme, darkMode, showGridPattern }) {
           <img
             src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=700&q=80"
             alt="K2 Treks group trekking"
-            style={{ width: '100%', borderRadius: '1.5rem', objectFit: 'cover', height: '420px' }}
+            style={{ width: '100%', borderRadius: '0.1rem', objectFit: 'cover', height: '420px',  boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}
           />
           <div className="about-rating-badge" style={{
             position: 'absolute', bottom: '-20px', left: '-20px',
-            background: '#3d7a4f', color: '#fff',
-            padding: '1.25rem 1.75rem', borderRadius: '1rem',
+            background: '#3d7a4f', color: '#faf2ee',
+            padding: '1.25rem 1.75rem', borderRadius: '0.1rem',
             boxShadow: '0 8px 30px rgba(61,122,79,0.4)',
           }}>
             <div style={{ fontSize: '1.75rem', fontWeight: 900 }}>4.8★</div>

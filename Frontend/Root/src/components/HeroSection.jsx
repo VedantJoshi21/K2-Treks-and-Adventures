@@ -132,15 +132,15 @@ export default function HeroSection({ darkMode }) {
         className="hero-prev-btn"
         style={{
           position: 'absolute', left: '2rem', top: '50%', transform: 'translateY(-50%)', zIndex: 10,
-          background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          color: '#fff', width: '48px', height: '48px', borderRadius: '50%',
+          background: 'rgba(250, 242, 238,0.15)', backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(250, 242, 238,0.3)',
+          color: '#faf2ee', width: '48px', height: '48px', borderRadius: '50%',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           cursor: 'pointer', transition: 'all 0.2s',
           fontSize: '20px',
         }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.3)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.3)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.15)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
         aria-label="Previous slide"
       >
         &#10094;
@@ -150,15 +150,15 @@ export default function HeroSection({ darkMode }) {
         className="hero-next-btn"
         style={{
           position: 'absolute', right: '2rem', top: '50%', transform: 'translateY(-50%)', zIndex: 10,
-          background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(4px)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          color: '#fff', width: '48px', height: '48px', borderRadius: '50%',
+          background: 'rgba(250, 242, 238,0.15)', backdropFilter: 'blur(4px)',
+          border: '1px solid rgba(250, 242, 238,0.3)',
+          color: '#faf2ee', width: '48px', height: '48px', borderRadius: '50%',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           cursor: 'pointer', transition: 'all 0.2s',
           fontSize: '20px',
         }}
-        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.3)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
-        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
+        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.3)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1.1)'; }}
+        onMouseLeave={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.15)'; e.currentTarget.style.transform = 'translateY(-50%) scale(1)'; }}
         aria-label="Next slide"
       >
         &#10095;
@@ -167,10 +167,10 @@ export default function HeroSection({ darkMode }) {
       {/* IAF Badge */}
       <div className="hero-iaf-badge" style={{
         position: 'absolute', top: '2rem', right: '2rem', zIndex: 2,
-        background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(8px)',
-        border: '1px solid rgba(255,255,255,0.2)',
+        background: 'rgba(250, 242, 238,0.1)', backdropFilter: 'blur(8px)',
+        border: '1px solid rgba(250, 242, 238,0.2)',
         padding: '8px 16px', borderRadius: '999px',
-        color: '#fff', fontSize: '12px', fontWeight: 700,
+        color: '#faf2ee', fontSize: '14px', fontWeight: 700,
         display: 'flex', alignItems: 'center', gap: '6px',
       }}>
         <span>✦</span> Founded by an IAF Veteran
@@ -179,7 +179,7 @@ export default function HeroSection({ darkMode }) {
       {/* Hero Content */}
       <div className="hero-content" style={{
         position: 'relative', zIndex: 1, textAlign: 'center',
-        padding: '0 1.5rem', maxWidth: '820px', margin: '0 auto',
+        padding: '0 1rem', maxWidth: '1000px', margin: '0 auto',
       }}>
         {/* <div style={{
           display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -208,7 +208,7 @@ export default function HeroSection({ darkMode }) {
             >
               <h1 style={{
                 fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900,
-                color: '#ffffff', lineHeight: 1.1, marginBottom: '1.25rem',
+                color: '#faf2ee', lineHeight: 1.1, marginBottom: '1.25rem',
                 letterSpacing: '-0.02em',
                 textShadow: '0 2px 20px rgba(0,0,0,0.3)',
               }}>
@@ -216,7 +216,7 @@ export default function HeroSection({ darkMode }) {
                 <span style={{ color: '#7ddc9a' }}>{slide.title2}</span>
               </h1>
               <p style={{
-                fontSize: '1.125rem', color: 'rgba(255,255,255,0.82)',
+                fontSize: '1.125rem', color: 'rgba(250, 242, 238,0.82)',
                 maxWidth: '600px', margin: '0 auto',
                 lineHeight: 1.7,
               }}>
@@ -230,7 +230,7 @@ export default function HeroSection({ darkMode }) {
           <a
             href="#treks"
             style={{
-              background: '#3d7a4f', color: '#fff',
+              background: '#3d7a4f', color: '#faf2ee',
               padding: '14px 32px', borderRadius: '999px',
               fontWeight: 700, fontSize: '1rem',
               textDecoration: 'none', transition: 'all 0.2s',
@@ -245,23 +245,23 @@ export default function HeroSection({ darkMode }) {
           <a
             href="#enquiry"
             style={{
-              background: 'rgba(255,255,255,0.15)', color: '#fff',
+              background: 'rgba(250, 242, 238,0.15)', color: '#faf2ee',
               padding: '14px 32px', borderRadius: '999px',
               fontWeight: 700, fontSize: '1rem',
               textDecoration: 'none', transition: 'all 0.2s',
-              border: '1.5px solid rgba(255,255,255,0.4)',
+              border: '1.5px solid rgba(250, 242, 238,0.4)',
               backdropFilter: 'blur(6px)',
             }}
             id="hero-enquiry-btn"
-            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.25)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.25)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'rgba(250, 242, 238,0.15)'; }}
           >
             Book Now
           </a>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem' }}>
-          <a href="#about" style={{ color: 'rgba(255,255,255,0.5)', animation: 'bounce 2s infinite' }}>
+          <a href="#about" style={{ color: 'rgba(250, 242, 238,0.5)', animation: 'bounce 2s infinite' }}>
             <ArrowDownIcon />
           </a>
         </div>
@@ -281,7 +281,7 @@ export default function HeroSection({ darkMode }) {
               width: currentSlide === index ? '28px' : '8px',
               height: '8px',
               borderRadius: '4px',
-              background: currentSlide === index ? '#7ddc9a' : 'rgba(255,255,255,0.4)',
+              background: currentSlide === index ? '#7ddc9a' : 'rgba(250, 242, 238,0.4)',
               border: 'none',
               cursor: 'pointer',
               transition: 'all 0.4s ease',

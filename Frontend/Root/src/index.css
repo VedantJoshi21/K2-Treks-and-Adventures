@@ -29,13 +29,13 @@
 
   /* Light theme */
   body.light {
-    background-color: #fafaf9;
+    background-color: #FFF8F0;
     color: #1c1917;
   }
 
   /* Dark theme */
   body.dark {
-    background-color: #181818;
+    background-color: #282828ff;
     color: #f0f4f1;
   }
 
@@ -61,7 +61,7 @@
   justify-content: center;
   background:
     radial-gradient(circle at 50% 40%, rgba(61, 122, 79, 0.12), transparent 26%),
-    #fafaf9;
+    #FFF8F0;
 }
 
 .site-loader-shell .loader {
@@ -161,8 +161,7 @@
 }
 
 .dark .grid-background, body.dark .grid-background {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: none;
 }
 
 .program-card {
@@ -207,4 +206,9 @@
 
 .dark .program-card:hover .icon-wrapper, body.dark .program-card:hover .icon-wrapper {
   filter: brightness(1.2);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
