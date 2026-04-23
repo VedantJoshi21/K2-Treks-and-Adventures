@@ -23,7 +23,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "cbb9eed9-3cde-424c-8ae8-20d90c03debc",
+          access_key: "ec628df6-c982-4b79-9bd5-b8d204f9a0d3",
           subject: `New Trek Enquiry: ${formData.trek} from ${formData.name}`,
           from_name: "K2 Treks & Adventures Enquiry",
           ...formData
@@ -37,10 +37,11 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
         setFormData({ name: '', email: '', phone: '', trek: '', message: '', date: '' });
         setTimeout(() => setFormStatus(null), 8000);
       } else {
+        console.error("Web3Forms submission failed:", result);
         setFormStatus('error');
       }
     } catch (error) {
-      console.error("Form submission error:", error);
+      console.error("Form submission network/client error:", error);
       setFormStatus('error');
     }
   };
