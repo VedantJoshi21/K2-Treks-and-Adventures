@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { MountainIcon, SunIcon, MoonIcon, MenuIcon, CloseIcon, InstagramIcon, YouTubeIcon, FacebookIcon } from './Icons';
+import logo from '../assets/Company_Logo_Transparent_BG.png';
+import { SunIcon, MoonIcon, MenuIcon, CloseIcon, InstagramIcon, YouTubeIcon, FacebookIcon } from './Icons';
 
 export default function Navbar({
   darkMode,
@@ -73,7 +74,7 @@ export default function Navbar({
           }} 
           style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: theme.text }}
         >
-          <MountainIcon className="w-8 h-8" style={{ color: '#3d7a4f', width: '2rem', height: '2rem' }} />
+          <img src={logo} alt="K2 Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
           <span style={{ fontSize: '1.3rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
             K2 <span style={{ color: '#3d7a4f' }}>Treks & Adventures</span>
           </span>

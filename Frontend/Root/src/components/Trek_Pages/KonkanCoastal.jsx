@@ -176,7 +176,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
           </h2>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ 
-              background: 'theme.cardBg', padding: '2.2rem', borderRadius: '2rem',
+              background: theme.cardBg, padding: '2.2rem', borderRadius: '2rem',
               width: '100%', maxWidth: '320px',
               border: `1px solid ${theme.border}`, boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
               position: 'relative', overflow: 'hidden'

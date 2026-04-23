@@ -1,5 +1,6 @@
 import React from 'react';
 import { InstagramIcon, YouTubeIcon, FacebookIcon } from './Icons';
+import logo from '../assets/Company_Logo_Transparent_BG.png';
 
 export default function Footer({ theme, darkMode }) {
   return (
@@ -13,9 +14,7 @@ export default function Footer({ theme, darkMode }) {
           {/* Brand */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-              <svg viewBox="0 0 24 24" fill="#3d7a4f" style={{ width: '28px', height: '28px' }}>
-                <path d="M14 6l-4.2 5.6-2.1-1.4L4 16h16L14 6z" />
-              </svg>
+              <img src={logo} alt="K2 Logo" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
               <span style={{ fontSize: '1.2rem', fontWeight: 900, color: theme.text }}>K2 Treks & Adventures</span>
             </div>
             <p style={{ color: theme.subtext, fontSize: '13px', maxWidth: '260px', lineHeight: 1.7, marginBottom: '16px' }}>

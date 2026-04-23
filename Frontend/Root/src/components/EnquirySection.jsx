@@ -54,7 +54,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           onSubmit={handleFormSubmit}
           className="enquiry-form-card"
           style={{
-            background: '#f2eae6ff', border: `1px solid ${theme.border}`,
+            background: theme.cardBg, border: `1px solid ${theme.border}`,
             borderRadius: '0rem', padding: '2.5rem',
             display: 'grid', gap: '1.25rem',
             boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'

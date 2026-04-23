@@ -42,12 +42,12 @@ export default function AboutSection({ theme, darkMode, showGridPattern }) {
           <img
             src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=700&q=80"
             alt="K2 Treks group trekking"
-            style={{ width: '100%', borderRadius: '1.5rem', objectFit: 'cover', height: '420px' }}
+            style={{ width: '100%', borderRadius: '0.1rem', objectFit: 'cover', height: '420px',  boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px' }}
           />
           <div className="about-rating-badge" style={{
             position: 'absolute', bottom: '-20px', left: '-20px',
             background: '#3d7a4f', color: '#faf2ee',
-            padding: '1.25rem 1.75rem', borderRadius: '1rem',
+            padding: '1.25rem 1.75rem', borderRadius: '0.1rem',
             boxShadow: '0 8px 30px rgba(61,122,79,0.4)',
           }}>
             <div style={{ fontSize: '1.75rem', fontWeight: 900 }}>4.8★</div>

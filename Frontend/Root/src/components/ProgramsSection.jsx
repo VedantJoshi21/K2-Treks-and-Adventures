@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProgramsSection({ theme, programs, id = "programs", title = "Specialized Programs", description = "Corporate, institutional, and specialized adventure training programs — designed with military-grade structure.", showGridPattern, variant = "specialized" }) {
   const isCorp = variant === 'corporate';
-  const sectionBg = isCorp ? '#FFF8F0' : 'transparent';
+  const sectionBg = isCorp ? theme.bg : 'transparent';
 
   return (
     <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} 

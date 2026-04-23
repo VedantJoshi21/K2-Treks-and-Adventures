@@ -14,7 +14,7 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
   };
 
   return (
-    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '3.5rem 1rem', background: theme.bg }}>
+    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '1.5rem 1rem', background: theme.bg }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
@@ -38,7 +38,7 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                background: theme.bg === '#181818' ? '#222' : '#faf2ee',
+                background: theme.cardBg,
                 borderRadius: '0.5rem',
                 overflow: 'hidden',
                 transition: 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)',
