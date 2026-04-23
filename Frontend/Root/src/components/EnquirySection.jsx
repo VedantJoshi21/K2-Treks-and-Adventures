@@ -23,7 +23,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "ec628df6-c982-4b79-9bd5-b8d204f9a0d3",
+          access_key: "dd4caefa-3fab-4991-b7a9-405631d4eda3",
           subject: `New Trek Enquiry: ${formData.trek} from ${formData.name}`,
           from_name: "K2 Treks & Adventures Enquiry",
           ...formData
