@@ -7,6 +7,9 @@ import Harishchandragad from './components/Trek_Pages/Harishchandragad';
 import KonkanCoastal from './components/Trek_Pages/KonkanCoastal';
 import KalsubaiSandhan from './components/Trek_Pages/KalsubaiSandhan';
 import RatangadSandhan from './components/Trek_Pages/RatangadSandhan';
+import ValleyOfFlowers from './components/Trek_Pages/ValleyOfFlowers';
+import Kedarnath from './components/Trek_Pages/Kedarnath';
+import DayaraBugyal from './components/Trek_Pages/DayaraBugyal';
 import Navbar from './components/Navbar';
 import { getTheme } from './components/theme';
 
@@ -77,6 +80,9 @@ function App() {
           <Route path="/trek/konkan-coastal-tour" element={<KonkanCoastal darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
           <Route path="/trek/kalsubai-sandhan-valley" element={<KalsubaiSandhan darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
           <Route path="/trek/ratangad-sandhan-valley" element={<RatangadSandhan darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/valley-of-flowers" element={<ValleyOfFlowers darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/kedarnath" element={<Kedarnath darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
+          <Route path="/trek/dayara-bugyal" element={<DayaraBugyal darkMode={darkMode} setDarkMode={setDarkMode} theme={theme} />} />
         </Routes>
       </div>
     </BrowserRouter>
