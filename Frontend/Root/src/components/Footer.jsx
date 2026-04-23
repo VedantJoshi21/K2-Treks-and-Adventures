@@ -191,7 +191,7 @@ export default function Footer({ theme, darkMode }) {
                 <div style={{ color: '#3d7a4f', marginTop: '2px' }}><MailIcon /></div>
                 <div>
                   <div style={{ fontSize: '14px', color: theme.text, fontWeight: 600 }}>Email</div>
-                  <div style={{ fontSize: '14px', color: theme.subtext }}>rakeshkale2381@gmail.com</div>
+                  <div style={{ fontSize: '14px', color: theme.subtext }}>k2enterprises03009@gmail.com</div>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
