@@ -23,18 +23,17 @@ export default function ReviewsSection({ theme, darkMode, reviews, showGridPatte
 
   return (
     <section id="reviews" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '6rem 1rem',
-      background: darkMode ? 'rgba(255,255,255,0.02)' : '#f5f5f4',
+      padding: '3.5rem 1rem', background: darkMode ? '#282828ff' : '#faf2ee',
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text,
           }}>
-            Words from the Trail
+            Words from <span style={{ color: '#3d7a4f' }}>the Trail</span>
           </h2>
         </div>
 
@@ -56,6 +55,7 @@ export default function ReviewsSection({ theme, darkMode, reviews, showGridPatte
           padding: '1rem 0 2rem',
           scrollBehavior: 'smooth',
           WebkitOverflowScrolling: 'touch',
+          
         }}>
           {reviews.map((r, i) => (
             <div
@@ -69,6 +69,7 @@ export default function ReviewsSection({ theme, darkMode, reviews, showGridPatte
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
               }}
             >
               <div>
@@ -82,7 +83,7 @@ export default function ReviewsSection({ theme, darkMode, reviews, showGridPatte
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                 <div style={{
                   width: '44px', height: '44px', borderRadius: '50%',
-                  background: '#3d7a4f', color: '#fff',
+                  background: '#3d7a4f', color: '#fee5c7ff',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
                   fontWeight: 800, fontSize: '1.1rem',
                   flexShrink: 0

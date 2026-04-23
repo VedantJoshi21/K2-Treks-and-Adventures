@@ -44,18 +44,18 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
 
   return (
     <section id="treks" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '6rem 1rem',
-      background: darkMode ? 'rgba(255,255,255,0.02)' : '#f5f5f4',
+      padding: '3.5rem 1rem',
+      background: darkMode ? '#282828ff' : '#FFF8F0',
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text,
           }}>
-            Explore Our Treks
+            Explore Our <span style={{ color: '#3d7a4f' }}>Treks</span>
           </h2>
           <p style={{ color: theme.subtext, maxWidth: '520px', margin: '1rem auto 0', lineHeight: 1.7 }}>
             Hand-crafted itineraries across the Sahyadri ranges and the mighty Himalayas. Something for every adventurer.
@@ -77,7 +77,7 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
                 fontWeight: 700, fontSize: '14px', cursor: 'pointer',
                 border: 'none', transition: 'all 0.2s',
                 background: activeTab === tab.id ? '#3d7a4f' : theme.cardBg,
-                color: activeTab === tab.id ? '#fff' : theme.subtext,
+                color: activeTab === tab.id ? '#faf2ee' : theme.subtext,
                 boxShadow: activeTab === tab.id ? '0 4px 16px rgba(61,122,79,0.3)' : 'none',
               }}
             >
@@ -95,7 +95,7 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
             className="treks-nav-btn treks-nav-btn-prev"
             style={{
               position: 'absolute', top: '40%', left: '1rem', transform: 'translateY(-50%)',
-              background: 'rgba(0,0,0,0.7)', color: '#fff', border: 'none',
+              background: 'rgba(0,0,0,0.7)', color: '#faf2ee', border: 'none',
               width: '40px', height: '40px', borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer', zIndex: 10, backdropFilter: 'blur(4px)',
@@ -110,7 +110,7 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
             className="treks-nav-btn treks-nav-btn-next"
             style={{
               position: 'absolute', top: '40%', right: '1rem', transform: 'translateY(-50%)',
-              background: 'rgba(0,0,0,0.7)', color: '#fff', border: 'none',
+              background: 'rgba(0,0,0,0.7)', color: '#faf2ee', border: 'none',
               width: '40px', height: '40px', borderRadius: '50%',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer', zIndex: 10, backdropFilter: 'blur(4px)',

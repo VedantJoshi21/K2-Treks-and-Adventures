@@ -7,11 +7,12 @@ export default function TrekCard({ trek, darkMode }) {
   return (
     <div
       style={{
-        background: darkMode ? 'rgba(255,255,255,0.04)' : '#ffffff',
-        border: darkMode ? '1px solid rgba(255,255,255,0.08)' : '1px solid #e7e5e4',
+        background: darkMode ? 'rgba(250, 242, 238,0.04)' : '#faf2ee',
+        border: darkMode ? '1px solid rgba(250, 242, 238,0.08)' : '1px solid #e7e5e4',
         borderRadius: '1rem',
         overflow: 'hidden',
         transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+         boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
       }}
       onMouseEnter={e => {
         e.currentTarget.style.transform = 'translateY(-4px)';
@@ -37,7 +38,7 @@ export default function TrekCard({ trek, darkMode }) {
           {trek.tags.map(tag => (
             <span key={tag} style={{
               background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)',
-              color: '#fff', fontSize: '11px', fontWeight: 600,
+              color: '#faf2ee', fontSize: '11px', fontWeight: 600,
               padding: '3px 10px', borderRadius: '999px',
             }}>
               {tag}
@@ -68,7 +69,7 @@ export default function TrekCard({ trek, darkMode }) {
         <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', paddingTop: '0.25rem' }}>
           {trek.slug ? (
             <Link to={`/trek/${trek.slug}`} style={{
-              background: '#3d7a4f', color: '#fff', padding: '8px 18px',
+              background: '#3d7a4f', color: '#faf2ee', padding: '8px 18px',
               borderRadius: '999px', fontSize: '13px', fontWeight: 600,
               textDecoration: 'none', transition: 'background 0.2s ease',
             }}
@@ -79,7 +80,7 @@ export default function TrekCard({ trek, darkMode }) {
             </Link>
           ) : (
             <a href="#enquiry" style={{
-              background: '#3d7a4f', color: '#fff', padding: '8px 18px',
+              background: '#3d7a4f', color: '#faf2ee', padding: '8px 18px',
               borderRadius: '999px', fontSize: '13px', fontWeight: 600,
               textDecoration: 'none', transition: 'background 0.2s ease',
             }}

@@ -14,7 +14,7 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
   };
 
   return (
-    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem', background: theme.bg }}>
+    <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '3.5rem 1rem', background: theme.bg }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
@@ -38,7 +38,7 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                background: theme.bg === '#181818' ? '#222' : '#e5e5e5ff',
+                background: theme.bg === '#181818' ? '#222' : '#faf2ee',
                 borderRadius: '0.5rem',
                 overflow: 'hidden',
                 transition: 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)',
@@ -65,14 +65,14 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
 
               {/* Content */}
               <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem', flex: 1 }}>
-                <div style={{ marginBottom: '1rem' }}>
+                {/* <div style={{ marginBottom: '1rem' }}>
                   {getIcon(i)}
-                </div>
+                </div> */}
                 
                 <h3 style={{ 
                   fontWeight: 800, fontSize: '1.25rem', letterSpacing: '0', 
                   color: theme.text, textTransform: 'uppercase', margin: '0 0 1rem 0',
-                  lineHeight: 1.3
+                  lineHeight: 1.3, textAlign: 'center'
                 }}>
                   {feature.title}
                 </h3>
@@ -102,9 +102,9 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
                   href="#enquiry" 
                   style={{ 
                     display: 'inline-block',
-                    fontSize: '0.8rem', fontWeight: 800, color: '#285c3b', 
+                    fontSize: '0.9rem', fontWeight: 800, color: '#285c3b', 
                     textDecoration: 'none', letterSpacing: '0.05em',
-                    textTransform: 'uppercase', marginTop: 'auto'
+                    textTransform: 'uppercase', marginTop: 'auto', textAlign: 'center'
                   }}
                   className="why-cta"
                 >

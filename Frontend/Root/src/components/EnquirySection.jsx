@@ -20,16 +20,16 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
   };
 
   return (
-    <section id="enquiry" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem' }}>
+    <section id="enquiry" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '3.5rem 1rem' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '880px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
 
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text,
           }}>
-            Book a Trek / Enquire
+            Book <span style={{ color: '#3d7a4f' }}>a Trek</span>
           </h2>
           <p style={{ color: theme.subtext, maxWidth: '480px', margin: '1rem auto 0', lineHeight: 1.7 }}>
             Fill out the form below and our team will get back to you within 24 hours with all the details and availability.
@@ -39,7 +39,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
         {/* Success Message */}
         {formStatus === 'success' && (
           <div style={{
-            background: '#e8f4ec', border: '1px solid #3d7a4f',
+            background: '#faf2ee', border: '1px solid #3d7a4f',
             borderRadius: '1rem', padding: '1.25rem 1.75rem',
             display: 'flex', alignItems: 'center', gap: '12px',
             marginBottom: '2rem', color: '#2d5c3b',
@@ -54,9 +54,10 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           onSubmit={handleFormSubmit}
           className="enquiry-form-card"
           style={{
-            background: theme.cardBg, border: `1px solid ${theme.border}`,
-            borderRadius: '1.5rem', padding: '2.5rem',
+            background: '#f2eae6ff', border: `1px solid ${theme.border}`,
+            borderRadius: '0rem', padding: '2.5rem',
             display: 'grid', gap: '1.25rem',
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
           }}
           id="enquiry-form"
         >
@@ -212,7 +213,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
             id="enquiry-submit-btn"
             style={{
               width: '100%', padding: '15px',
-              background: '#3d7a4f', color: '#fff',
+              background: '#3d7a4f', color: '#faf2ee',
               border: 'none', borderRadius: '10px',
               fontWeight: 800, fontSize: '1rem', cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',

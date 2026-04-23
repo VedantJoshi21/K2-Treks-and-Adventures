@@ -182,7 +182,7 @@ export default function Navbar({
             href="#enquiry"
             onClick={() => setMobileMenuOpen(false)}
             style={{
-              background: '#3d7a4f', color: '#fff',
+              background: '#3d7a4f', color: '#faf2ee',
               padding: '12px 22px', borderRadius: '999px',
               fontWeight: 700, fontSize: '1rem',
               textDecoration: 'none', textAlign: 'center',

@@ -2,19 +2,19 @@ import React from 'react';
 
 export default function ProgramsSection({ theme, programs, id = "programs", title = "Specialized Programs", description = "Corporate, institutional, and specialized adventure training programs — designed with military-grade structure.", showGridPattern, variant = "specialized" }) {
   const isCorp = variant === 'corporate';
-  const sectionBg = isCorp ? '#fcf9f5' : 'transparent';
+  const sectionBg = isCorp ? '#FFF8F0' : 'transparent';
 
   return (
     <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} 
-      style={{ padding: isCorp ? '4.5rem 1rem' : '6rem 1rem', background: sectionBg, position: 'relative' }}>
+      style={{ padding: isCorp ? '2.5rem 1rem' : '3.5rem 1rem', background: sectionBg, position: 'relative' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: isCorp ? '1200px' : '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         <div style={{ textAlign: 'center', marginBottom: isCorp ? '3.5rem' : '5rem' }}>
           <h2 style={{
-            fontSize: isCorp ? 'clamp(1.5rem, 3.5vw, 2.2rem)' : 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
-            lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text,
           }}>
-            {title}
+            {title.split(' ').slice(0, -1).join(' ')} <span style={{ color: '#3d7a4f' }}>{title.split(' ').slice(-1)}</span>
           </h2>
           <p style={{ color: theme.subtext, maxWidth: '520px', margin: '1rem auto 0', lineHeight: 1.7 }}>
             {description}
@@ -79,7 +79,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             font-weight: 900;
             line-height: 1;
             letter-spacing: -0.06em;
-            color: rgba(255,255,255,0.25);
+            color: rgba(250, 242, 238,0.25);
             position: absolute;
             top: 0.5rem; left: 2rem;
             pointer-events: none;
@@ -111,14 +111,14 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           .sp-card-title {
             font-size: clamp(1.8rem, 3.5vw, 2.7rem);
             font-weight: 900;
-            color: #fff;
+            color: #C9B194;
             line-height: 1.1;
             letter-spacing: -0.04em;
             margin-bottom: 1.25rem;
             text-shadow: 0 4px 12px rgba(0,0,0,0.5);
           }
           .sp-card-desc {
-            color: rgba(255,255,255,0.88);
+            color: rgba(250, 242, 238,0.88);
             font-size: 1rem;
             line-height: 1.85;
             max-width: 420px;
@@ -133,8 +133,8 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             background: linear-gradient(
               to bottom,
               transparent,
-              rgba(255,255,255,0.14) 20%,
-              rgba(255,255,255,0.14) 80%,
+              rgba(250, 242, 238,0.14) 20%,
+              rgba(250, 242, 238,0.14) 80%,
               transparent
             );
           }
@@ -148,7 +148,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             padding-left: 3.5rem;
           }
           .sp-card-features-label {
-            color: rgba(255,255,255,0.35);
+            color: rgba(250, 242, 238,0.35);
             font-size: 10px; font-weight: 800;
             letter-spacing: 0.15em; text-transform: uppercase;
             margin-bottom: 0.5rem;
@@ -159,35 +159,35 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           }
           .sp-feat-item {
             display: flex; align-items: center; gap: 14px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.09);
+            background: rgba(250, 242, 238,0.05);
+            border: 1px solid rgba(250, 242, 238,0.09);
             backdrop-filter: blur(6px);
             border-radius: 0.875rem;
             padding: 14px 18px;
             transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
           }
           .sp-card:hover .sp-feat-item {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.15);
+            background: rgba(250, 242, 238,0.05);
+            border-color: rgba(250, 242, 238,0.15);
           }
           .sp-feat-item:hover {
             transform: translateX(7px);
-            background: rgba(255,255,255,0.1) !important;
-            border-color: rgba(255,255,255,0.2) !important;
+            background: rgba(250, 242, 238,0.1) !important;
+            border-color: rgba(250, 242, 238,0.2) !important;
           }
           .sp-feat-icon {
             width: 32px; height: 32px; border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(250, 242, 238,0.1);
             display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
           }
           .sp-feat-icon svg {
             width: 15px; height: 15px;
-            stroke: #ffffff;
+            stroke: #faf2ee;
           }
           .sp-feat-text {
             font-size: 13.5px; font-weight: 600;
-            color: rgba(255,255,255,0.82);
+            color: rgba(250, 242, 238,0.82);
             letter-spacing: 0.01em;
           }
 

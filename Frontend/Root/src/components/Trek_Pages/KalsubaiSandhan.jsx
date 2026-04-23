@@ -39,7 +39,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
         <div style={{
           position: 'relative', height: '100%', maxWidth: '1440px', margin: '0 auto',
           padding: '0 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center',
-          color: '#fff', zIndex: 10
+          color: '#faf2ee', zIndex: 10
         }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -48,7 +48,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
           >
             <div style={{ 
               display: 'inline-flex', alignItems: 'center', gap: '8px', 
-              background: '#3d7a4f', color: '#fff',
+              background: '#3d7a4f', color: '#faf2ee',
               padding: '6px 16px', borderRadius: '999px', marginBottom: '1.5rem',
               fontSize: '0.9rem', fontWeight: 700, letterSpacing: '0.1em'
             }}>
@@ -70,16 +70,16 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
             
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
               <a href="#enquiry" style={{
-                background: '#fff', color: '#3d7a4f', padding: '16px 40px',
+                background: '#faf2ee', color: '#3d7a4f', padding: '16px 40px',
                 borderRadius: '999px', fontWeight: 800, textDecoration: 'none',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.2)', transition: 'all 0.3s',
               }} onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                 Join the Expedition
               </a>
               <a href="https://wa.me/9209548856" target="_blank" rel="noopener noreferrer" style={{
-                background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '16px 40px',
+                background: 'rgba(250, 242, 238,0.1)', color: '#faf2ee', padding: '16px 40px',
                 borderRadius: '999px', fontWeight: 700, textDecoration: 'none',
-                backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)',
+                backdropFilter: 'blur(10px)', border: '1px solid rgba(250, 242, 238,0.2)',
                 display: 'flex', alignItems: 'center', gap: '8px',
               }}>
                 Travel Details
@@ -104,7 +104,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
               { label: 'DURATION', value: '3-4 hrs Trek', icon: <Clock size={22} /> },
             ].map(stat => (
               <div key={stat.label} style={{ 
-                background: '#fdfbf7', padding: '1.75rem 1rem', borderRadius: '1.25rem',
+                background: '#FFF8F0', padding: '1.75rem 1rem', borderRadius: '1.25rem',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.03)'
               }}>
@@ -118,11 +118,15 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Intro Section */}
-      <section style={{ padding: '8rem 1.5rem 4rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#3d7a4f', marginBottom: '1.5rem' }}>
-              The Everest of Maharashtra
+            <h2 style={{ 
+              fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+              lineHeight: 1, letterSpacing: '-0.05em', color: '#3d7a4f', 
+              marginBottom: '1.5rem' 
+            }}>
+              The Everest of <span style={{ color: theme.text }}>Maharashtra</span>
             </h2>
             <p style={{ color: theme.subtext, lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '2rem' }}>
               Standing tall at 5,400 feet, Kalsubai is the highest peak in Maharashtra. Paired with the breathtaking Sandhan Valley—often called the Shadow Valley—this trek offers an unparalleled mix of high-altitude triumph and deep canyon exploration.
@@ -157,10 +161,15 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Package Pricing */}
-      <section style={{ padding: '1rem 1.5rem', background: darkMode ? 'rgba(0,0,0,0.2)' : '#f8f9fa' }}>
+      <section style={{ padding: '1rem 1.5rem', background: darkMode ? '#282828ff' : '#FFF8F0' }}>
         <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-            <h2 style={{fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, marginBottom: '0.65rem' }}>Pricing & Packages</h2>
+            <h2 style={{
+              fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+              lineHeight: 1, letterSpacing: '-0.05em', marginBottom: '0.65rem' 
+            }}>
+              Pricing & <span style={{ color: '#3d7a4f' }}>Packages</span>
+            </h2>
             <p style={{ color: theme.subtext, fontSize: '0.9rem' }}>Choose the pickup that suits your location</p>
           </div>
 
@@ -190,7 +199,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
                 {plan.highlight && (
                   <div style={{ 
                     position: 'absolute', top: '-10px', background: '#3d7a4f', 
-                    color: '#fff', padding: '4px 13px', borderRadius: '999px',
+                    color: '#faf2ee', padding: '4px 13px', borderRadius: '999px',
                     fontSize: '0.55rem', fontWeight: 800
                   }}>MOST POPULAR</div>
                 )}
@@ -208,7 +217,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
                 
                 <a href="#enquiry" style={{ 
                   width: '100%', textAlign: 'center', background: plan.highlight ? '#3d7a4f' : 'transparent',
-                  color: plan.highlight ? '#fff' : '#3d7a4f', padding: '0.65rem', borderRadius: '0.65rem',
+                  color: plan.highlight ? '#faf2ee' : '#3d7a4f', padding: '0.65rem', borderRadius: '0.65rem',
                   fontWeight: 800, textDecoration: 'none', border: plan.highlight ? 'none' : '2px solid #3d7a4f',
                   transition: 'all 0.3s'
                 }}>Book My Spot</a>
@@ -217,8 +226,8 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
           </div>
 
           <div style={{ 
-            marginTop: '2.5rem', textAlign: 'center', padding: '1rem', 
-            background: 'rgba(61,122,79,0.1)', borderRadius: '1rem', maxWidth: '500px', margin: '2.5rem auto 0'
+            marginTop: '2rem', textAlign: 'center', padding: '1rem', 
+            background: 'rgba(61,122,79,0.1)', borderRadius: '1rem', maxWidth: '500px', margin: '2rem auto 0'
           }}>
             <Gem size={24} color="#3d7a4f" style={{ marginBottom: '0rem' }} />
             <h4 style={{ fontWeight: 800, marginBottom: '0.5rem' }}>Special Offer</h4>
@@ -228,10 +237,15 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Itinerary Section */}
-      <section style={{ padding: '4rem 1.5rem', background: theme.bg, position: 'relative', overflow: 'hidden' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+      <section style={{ padding: '2.5rem 1.5rem', background: theme.bg, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <div style={{ color: '#3d7a4f', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>THE PATH FORWARD</div>
-          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, letterSpacing: '-0.02em' }}>Curated Itinerary</h2>
+          <h2 style={{ 
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+            lineHeight: 1, letterSpacing: '-0.05em' 
+          }}>
+            Curated <span style={{ color: '#3d7a4f' }}>Itinerary</span>
+          </h2>
         </div>
         
         <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
@@ -257,7 +271,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
  
               <div style={{ flex: '1 1 350px', textAlign: 'right', paddingRight: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
                 <div style={{ 
-                  display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                  display: 'inline-block', background: '#3d7a4f', color: '#faf2ee', 
                   fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
                   borderRadius: '999px', marginBottom: '1rem' 
                 }}>DAY 01</div>
@@ -319,7 +333,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
  
               <div style={{ flex: '1 1 350px', textAlign: 'left', paddingLeft: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
                 <div style={{ 
-                  display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                  display: 'inline-block', background: '#3d7a4f', color: '#faf2ee', 
                   fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
                   borderRadius: '999px', marginBottom: '1rem' 
                 }}>DAY 02</div>
@@ -353,11 +367,11 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Preparation & Inclusions */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section style={{ padding: '3.5rem 1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
           
           {/* Essentials Column */}
-          <div style={{ background: darkMode ? 'rgba(255,255,255,0.03)' : '#fff', padding: '2.5rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
+          <div style={{ background: darkMode ? 'rgba(250, 242, 238,0.03)' : '#faf2ee', padding: '2.5rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <Info size={24} color="#3d7a4f" /> Trek Essentials
             </h3>
@@ -390,14 +404,14 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
 
           {/* Inclusions / Exclusions Column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div style={{ background: darkMode ? 'rgba(61,122,79,0.1)' : 'rgba(61,122,79,0.05)', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
+            <div style={{ background: darkMode ? 'rgba(61,122,79,0.1)' : '#FFF8F0', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#3d7a4f' }}>
                 <CheckCircle2 size={22} /> Inclusions
               </h3>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                 {['Travel', 'Local Transport', 'Meals (2B, 2L, 1D)', 'Stay (Tent / Homestay)', 'Forest Entry', 'Trek Leader', 'First Aid', 'Trek Certificate'].map(inc => (
                   <span key={inc} style={{ 
-                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    background: '#faf2ee', color: '#333', padding: '6px 14px', 
                     borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
                     boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                   }}>
@@ -414,7 +428,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                 {['Bottled Water', 'Personal Expenses', 'Rappelling / Zipline', 'Unmentions'].map(exc => (
                   <span key={exc} style={{ 
-                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    background: '#faf2ee', color: '#333', padding: '6px 14px', 
                     borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
                     boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                   }}>
@@ -432,6 +446,46 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section style={{ padding: '3.5rem 1.5rem', textAlign: 'center' }}>
+        <div style={{ 
+          maxWidth: '1000px', margin: '0 auto', background: '#3d7a4f', 
+          color: '#faf2ee', padding: '2.5rem 2rem', borderRadius: '2.5rem',
+          boxShadow: '0 30px 60px rgba(61,122,79,0.3)',
+          position: 'relative', overflow: 'hidden'
+        }}>
+          {/* Decorative background shape */}
+          <div style={{ 
+            position: 'absolute', top: '-100px', right: '-100px', width: '300px', height: '300px',
+            background: 'rgba(250, 242, 238,0.1)', borderRadius: '50%', zIndex: 0
+          }}></div>
+          
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <h2 style={{ 
+              fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, 
+              lineHeight: 1, letterSpacing: '-0.05em', marginBottom: '1.5rem' 
+            }}>
+              Limited Seats <span style={{ color: '#9dccaa' }}>Available</span>
+            </h2>
+            <p style={{ fontSize: '1.25rem', opacity: 0.9, marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+              Join us for an unforgettable journey to the top of the world. Ready to start your adventure?
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
+              <a href="#enquiry" style={{ 
+                background: '#faf2ee', color: '#3d7a4f', padding: '16px 40px', 
+                borderRadius: '999px', fontWeight: 800, textDecoration: 'none',
+                fontSize: '1.1rem'
+              }}>Book Your Spot Now</a>
+              <a href="https://wa.me/9209548856" style={{ 
+                background: 'transparent', color: '#faf2ee', padding: '16px 40px', 
+                borderRadius: '999px', fontWeight: 800, textDecoration: 'none',
+                fontSize: '1.1rem', border: '2px solid rgba(250, 242, 238,0.3)'
+              }}>Talk to an Expert</a>
+            </div>
+          </div>
         </div>
       </section>
 

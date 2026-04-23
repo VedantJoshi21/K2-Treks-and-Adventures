@@ -6,7 +6,7 @@ export default function Footer({ theme, darkMode }) {
     <footer style={{
       borderTop: `1px solid ${theme.border}`,
       padding: '3rem 1rem 2rem',
-      background: darkMode ? '#0a1209' : '#f0f0ef',
+      background: darkMode ? '#282828ff' : '#FFF8F0',
     }}>
       <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
         <div className="footer-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '2rem', marginBottom: '2.5rem' }}>

@@ -39,7 +39,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
         <div style={{
           position: 'relative', height: '100%', maxWidth: '1440px', margin: '0 auto',
           padding: '0 1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center',
-          color: '#fff', zIndex: 10
+          color: '#faf2ee', zIndex: 10
         }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -48,9 +48,9 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
           >
             <div style={{ 
               display: 'inline-flex', alignItems: 'center', gap: '8px', 
-              background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)',
+              background: 'rgba(250, 242, 238,0.1)', backdropFilter: 'blur(10px)',
               padding: '6px 16px', borderRadius: '999px', marginBottom: '1.5rem',
-              border: '1px solid rgba(255,255,255,0.2)', fontSize: '0.9rem', fontWeight: 600
+              border: '1px solid rgba(250, 242, 238,0.2)', fontSize: '0.9rem', fontWeight: 600
             }}>
               <Palmtree size={16} color="#4ade80" /> BEYOND THE SHORELINE
             </div>
@@ -70,16 +70,16 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
             
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
               <a href="#enquiry" style={{
-                background: '#3d7a4f', color: '#fff', padding: '16px 36px',
+                background: '#3d7a4f', color: '#faf2ee', padding: '16px 36px',
                 borderRadius: '999px', fontWeight: 700, textDecoration: 'none',
                 boxShadow: '0 10px 30px rgba(61, 122, 79, 0.3)', transition: 'all 0.3s',
               }} onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-3px)'} onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}>
                 Secure Your Spot
               </a>
               <a href="https://wa.me/9209548856" target="_blank" rel="noopener noreferrer" style={{
-                background: 'rgba(255,255,255,0.1)', color: '#fff', padding: '16px 36px',
+                background: 'rgba(250, 242, 238,0.1)', color: '#faf2ee', padding: '16px 36px',
                 borderRadius: '999px', fontWeight: 700, textDecoration: 'none',
-                backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.2)',
+                backdropFilter: 'blur(10px)', border: '1px solid rgba(250, 242, 238,0.2)',
                 display: 'flex', alignItems: 'center', gap: '8px',
               }}>
                 Consult an Expert
@@ -104,7 +104,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
               { label: 'ROUTE', value: 'Wardha - Kolhapur - Malvan', icon: <Route size={22} /> },
             ].map(stat => (
               <div key={stat.label} style={{ 
-                background: '#fdfbf7', padding: '1.75rem 1rem', borderRadius: '1.25rem',
+                background: '#FFF8F0', padding: '1.75rem 1rem', borderRadius: '1.25rem',
                 display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.03)'
               }}>
@@ -118,11 +118,15 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Intro Section */}
-      <section style={{ padding: '8rem 1.5rem 4rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#3d7a4f', marginBottom: '1.5rem' }}>
-              Coastal Magic & Spiritual Serenity
+            <h2 style={{ 
+              fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+              lineHeight: 1, letterSpacing: '-0.05em', color: '#3d7a4f', 
+              marginBottom: '1.5rem' 
+            }}>
+              Coastal Magic & <span style={{ color: theme.text }}>Spiritual Serenity</span>
             </h2>
             <p style={{ color: theme.subtext, lineHeight: 1.8, fontSize: '1.1rem', marginBottom: '2rem' }}>
               Experience the best of Konkan with our curated 7-day tour. From the historic Mahalaxmi Temple in Kolhapur to the turquoise waters of Devbag Sangam, this journey is designed to rejuvenate your soul through sun, sand, and spirituality.
@@ -158,23 +162,28 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
 
       {/* Pricing Section */}
       <section style={{ 
-        padding: '3.8rem 1.5rem', 
-        background: darkMode ? 'rgba(61,122,79,0.1)' : 'rgba(61,122,79,0.03)',
-        margin: '2.5rem 0',
+        padding: '2.5rem 1.5rem', 
+        background: darkMode ? '#282828ff' : '#FFF8F0',
+        margin: '1.5rem 0',
         position: 'relative'
       }}>
         <div style={{ maxWidth: '1440px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, marginBottom: '2.5rem', letterSpacing: '-0.02em' }}>Investment for Memories</h2>
+          <h2 style={{ 
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+            lineHeight: 1, letterSpacing: '-0.05em', marginBottom: '2.5rem' 
+          }}>
+            Investment <span style={{ color: '#3d7a4f' }}>for Memories</span>
+          </h2>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ 
-              background: theme.cardBg, padding: '2.2rem', borderRadius: '2rem',
+              background: 'theme.cardBg', padding: '2.2rem', borderRadius: '2rem',
               width: '100%', maxWidth: '320px',
               border: `1px solid ${theme.border}`, boxShadow: '0 30px 60px rgba(0,0,0,0.1)',
               position: 'relative', overflow: 'hidden'
             }}>
               <div style={{ 
                 position: 'absolute', top: '1.3rem', right: '-1.6rem', 
-                background: '#dc2626', color: '#fff', padding: '5px 26px', 
+                background: '#dc2626', color: '#faf2ee', padding: '5px 26px', 
                 transform: 'rotate(45deg)', fontSize: '0.55rem', fontWeight: 900,
                 letterSpacing: '0.1em'
               }}>Special Offer</div>
@@ -196,7 +205,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
               </div>
               
               <a href="#enquiry" style={{ 
-                display: 'block', background: '#3d7a4f', color: '#fff', 
+                display: 'block', background: '#3d7a4f', color: '#faf2ee', 
                 padding: '0.8rem', borderRadius: '0.65rem', fontWeight: 800, 
                 textDecoration: 'none', transition: 'all 0.3s'
               }} onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.02)'} onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}>
@@ -208,10 +217,15 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Itinerary Section */}
-      <section style={{ padding: '4rem 1.5rem', background: theme.bg, position: 'relative', overflow: 'hidden' }}>
+      <section style={{ padding: '2.5rem 1.5rem', background: theme.bg, position: 'relative', overflow: 'hidden' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <div style={{ color: '#3d7a4f', fontWeight: 800, fontSize: '0.8rem', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>THE PATH FORWARD</div>
-          <h2 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900, letterSpacing: '-0.02em' }}>Curated Itinerary</h2>
+          <h2 style={{ 
+            fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
+            lineHeight: 1, letterSpacing: '-0.05em' 
+          }}>
+            Curated <span style={{ color: '#3d7a4f' }}>Itinerary</span>
+          </h2>
         </div>
         
         <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative' }}>
@@ -288,7 +302,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
                   <>
                     <div style={{ flex: '1 1 350px', textAlign: 'right', paddingRight: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
                       <div style={{ 
-                        display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                        display: 'inline-block', background: '#3d7a4f', color: '#faf2ee', 
                         fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
                         borderRadius: '999px', marginBottom: '1rem' 
                       }}>{item.day}</div>
@@ -332,7 +346,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
                     </div>
                     <div style={{ flex: '1 1 350px', textAlign: 'left', paddingLeft: 'clamp(1rem, 3vw, 2rem)' }} className="itinerary-text-side">
                       <div style={{ 
-                        display: 'inline-block', background: '#3d7a4f', color: '#fff', 
+                        display: 'inline-block', background: '#3d7a4f', color: '#faf2ee', 
                         fontSize: '0.7rem', fontWeight: 800, padding: '3px 10px', 
                         borderRadius: '999px', marginBottom: '1rem' 
                       }}>{item.day}</div>
@@ -364,18 +378,18 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Tour Logistics & Essentials */}
-      <section style={{ padding: '6rem 1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
+      <section style={{ padding: '2.5rem 1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           
           {/* Essentials Column */}
-          <div style={{ background: darkMode ? 'rgba(255,255,255,0.03)' : '#fff', padding: '2.5rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
+          <div style={{ background: darkMode ? 'rgba(250, 242, 238,0.03)' : '#faf2ee', padding: '2rem', borderRadius: '1.5rem', border: `1px solid ${theme.border}` }}>
             <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <Info size={24} color="#3d7a4f" /> Tour Essentials
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div>
                 <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', color: '#3d7a4f' }}>WHAT TO PACK</div>
-                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                   {[
                     'Lightweight Cotton Clothes',
                     'Beachwear & Extra Pair of Footwear',
@@ -400,8 +414,8 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
           </div>
 
           {/* Inclusions / Exclusions Column */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <div style={{ background: darkMode ? 'rgba(61,122,79,0.1)' : 'rgba(61,122,79,0.05)', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{ background: darkMode ? 'rgba(61,122,79,0.1)' : '#FFF8F0', padding: '2rem', borderRadius: '1.5rem', flex: 1 }}>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#3d7a4f' }}>
                 <CheckCircle2 size={22} /> What's Included
               </h3>
@@ -416,7 +430,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
                   'Campfire & DJ Night'
                 ].map(inc => (
                   <span key={inc} style={{ 
-                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    background: '#faf2ee', color: '#333', padding: '6px 14px', 
                     borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
                     boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                   }}>
@@ -439,7 +453,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
                   'Unmentions'
                 ].map(exc => (
                   <span key={exc} style={{ 
-                    background: '#fff', color: '#333', padding: '6px 14px', 
+                    background: '#faf2ee', color: '#333', padding: '6px 14px', 
                     borderRadius: '999px', fontSize: '0.85rem', fontWeight: 600,
                     boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
                   }}>
@@ -462,32 +476,42 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
         </div>
       </section>
 
-      {/* Special CTA */}
-      <section style={{ padding: '6rem 1.5rem' }}>
+      {/* Final CTA */}
+      <section style={{ padding: '3.5rem 1.5rem', textAlign: 'center' }}>
         <div style={{ 
-          maxWidth: '1200px', margin: '0 auto', background: '#1c1917', 
-          color: '#fff', borderRadius: '0rem', padding: '5rem 3rem',
-          textAlign: 'center', position: 'relative', overflow: 'hidden',
-          boxShadow: '0 40px 100px -20px rgba(0,0,0,0.5)'
+          maxWidth: '1000px', margin: '0 auto', background: '#3d7a4f', 
+          color: '#faf2ee', padding: '2.5rem 2rem', borderRadius: '2.5rem',
+          boxShadow: '0 30px 60px rgba(61,122,79,0.3)',
+          position: 'relative', overflow: 'hidden'
         }}>
+          {/* Decorative background shape */}
           <div style={{ 
-            position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-            backgroundImage: 'radial-gradient(circle at 10% 20%, rgba(61,122,79,0.3) 0%, transparent 40%)',
-            zIndex: 0
-          }} />
-          <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, marginBottom: '1.5rem', position: 'relative', zIndex: 1 }}>
-            Limited Seats for Konkan Batch
-          </h2>
-          <p style={{ fontSize: '1.25rem', opacity: 0.8, marginBottom: '3rem', maxWidth: '700px', margin: '0 auto 3rem', position: 'relative', zIndex: 1 }}>
-            The coastline is calling. Secure your spot on Asia's most beautiful coastal route before the batch is full.
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-            <a href="#enquiry" style={{ background: '#3d7a4f', color: '#fff', padding: '16px 48px', borderRadius: '999px', fontWeight: 800, textDecoration: 'none' }}>
-              Book Now: 9209548856
-            </a>
-            <a href="https://wa.me/9209548856" style={{ background: 'transparent', color: '#fff', padding: '16px 48px', borderRadius: '999px', fontWeight: 800, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.2)' }}>
-              WhatsApp Enquiry
-            </a>
+            position: 'absolute', top: '-100px', right: '-100px', width: '300px', height: '300px',
+            background: 'rgba(250, 242, 238,0.1)', borderRadius: '50%', zIndex: 0
+          }}></div>
+          
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <h2 style={{ 
+              fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 900, 
+              lineHeight: 1, letterSpacing: '-0.05em', marginBottom: '1.5rem' 
+            }}>
+              Limited Seats <span style={{ color: '#9dccaa' }}>for Konkan Batch</span>
+            </h2>
+            <p style={{ fontSize: '1.25rem', opacity: 0.9, marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+              The coastline is calling. Secure your spot on Asia's most beautiful coastal route before the batch is full.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
+              <a href="#enquiry" style={{ 
+                background: '#faf2ee', color: '#3d7a4f', padding: '16px 40px', 
+                borderRadius: '999px', fontWeight: 800, textDecoration: 'none',
+                fontSize: '1.1rem'
+              }}>Book Your Spot Now</a>
+              <a href="https://wa.me/9209548856" style={{ 
+                background: 'transparent', color: '#faf2ee', padding: '16px 40px', 
+                borderRadius: '999px', fontWeight: 800, textDecoration: 'none',
+                fontSize: '1.1rem', border: '2px solid rgba(250, 242, 238,0.3)'
+              }}>Talk to an Expert</a>
+            </div>
           </div>
         </div>
       </section>
