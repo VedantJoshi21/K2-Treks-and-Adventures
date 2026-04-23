@@ -466,8 +466,9 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       <section style={{ padding: '6rem 1.5rem' }}>
         <div style={{ 
           maxWidth: '1200px', margin: '0 auto', background: '#1c1917', 
-          color: '#fff', borderRadius: '3rem', padding: '5rem 3rem',
-          textAlign: 'center', position: 'relative', overflow: 'hidden'
+          color: '#fff', borderRadius: '0rem', padding: '5rem 3rem',
+          textAlign: 'center', position: 'relative', overflow: 'hidden',
+          boxShadow: '0 40px 100px -20px rgba(0,0,0,0.5)'
         }}>
           <div style={{ 
             position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',

@@ -220,7 +220,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
             marginTop: '2.5rem', textAlign: 'center', padding: '1rem', 
             background: 'rgba(61,122,79,0.1)', borderRadius: '1rem', maxWidth: '500px', margin: '2.5rem auto 0'
           }}>
-            <Gem size={24} color="#3d7a4f" style={{ marginBottom: '1rem' }} />
+            <Gem size={24} color="#3d7a4f" style={{ marginBottom: '0rem' }} />
             <h4 style={{ fontWeight: 800, marginBottom: '0.5rem' }}>Special Offer</h4>
             <p style={{ color: theme.subtext }}>Exclusive discounts available for Defence Personnel & NCC Cadets. Contact us with your ID for details.</p>
           </div>

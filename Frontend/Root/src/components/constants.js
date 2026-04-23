@@ -231,6 +231,41 @@ export const reviews = [
     trek: "Rajgad Fort Trek",
     text: "Great organisation and the historical context our guide provided made the whole experience richer. Highly recommend for history lovers and trekkers alike.",
   },
+  {
+    name: "Sanya Iyer",
+    date: "February 2026",
+    rating: 5,
+    trek: "Kalsubai & Sandhan Valley",
+    text: "The Sandhan Valley canyoning was intense but the K2 team made us feel secure throughout. Their expertise in rope work is top-notch. An adrenaline-pumping experience!",
+  },
+  {
+    name: "Vikram Malhotra",
+    date: "December 2025",
+    rating: 5,
+    trek: "Valley of Flowers",
+    text: "A bucket list experience! K2 Treks handled the logistics perfectly, allowing us to just soak in the beauty of the Himalayas. Our guide knew the best spots for photography.",
+  },
+  {
+    name: "Ananya Kulkarni",
+    date: "February 2026",
+    rating: 5,
+    trek: "Ratangad Fort",
+    text: "Beautifully organized. The food at the base village was delicious and the trek leaders were very encouraging. The views from 'Nedhe' were breathtaking!",
+  },
+  {
+    name: "Arjun Singh",
+    date: "October 2025",
+    rating: 4,
+    trek: "Leh-Ladakh Road Trip",
+    text: "Well-planned road trip. The bikes were in great condition and the support vehicle was always there. A bit tiring, but absolutely worth the effort.",
+  },
+  {
+    name: "Meera Reddy",
+    date: "March 2026",
+    rating: 5,
+    trek: "Kedarkantha Trek",
+    text: "The winter landscape was surreal. K2's focus on safety and acclimatization made me feel very comfortable even as a solo female traveler. Truly professional.",
+  },
 ];
 
 export const whyUsFeatures = [

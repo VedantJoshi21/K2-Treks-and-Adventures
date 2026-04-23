@@ -1,24 +1,35 @@
 import React from 'react';
+import { ShieldCheck, Brain, Leaf, Network, AlignCenter } from 'lucide-react';
 
 export default function WhyUsSection({ theme, features, showGridPattern }) {
+  // Map index to specific icon to match the image
+  const getIcon = (index) => {
+    switch (index) {
+      case 0: return <ShieldCheck size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 1: return <Brain size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 2: return <Leaf size={24} color="#285c3b" strokeWidth={2.5} />;
+      case 3: return <Network size={24} color="#285c3b" strokeWidth={2.5} />;
+      default: return <ShieldCheck size={24} color="#285c3b" strokeWidth={2.5} />;
+    }
+  };
+
   return (
     <section id="whyus" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem', background: theme.bg }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+        <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
           <h2 style={{
             fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900,
-            lineHeight: 1.1, letterSpacing: '-0.04em', color: theme.text,
-            textTransform: 'uppercase'
+            lineHeight: 1, letterSpacing: '-0.05em', color: theme.text, textAlign: 'center'
           }}>
-            Why Partner With K2 Treks?
+            Why Partner With <span style={{ color: '#3d7a4f' }}>K2 Treks?</span>
           </h2>
         </div>
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
-          gap: '5rem 4rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '2rem',
         }}>
           {features.map((feature, i) => (
             <div
@@ -27,17 +38,18 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '1.75rem',
+                background: theme.bg === '#181818' ? '#222' : '#e5e5e5ff',
+                borderRadius: '0.5rem',
+                overflow: 'hidden',
                 transition: 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)',
+                boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
               }}
             >
               {/* Image Container */}
               <div style={{
                 position: 'relative',
                 width: '100%',
-                paddingBottom: '65%',
-                borderRadius: '1.25rem',
-                overflow: 'hidden',
+                paddingBottom: '100%',
                 background: '#000',
               }}>
                 <img 
@@ -52,37 +64,34 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
               </div>
 
               {/* Content */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ 
-                  fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.1em', 
-                  color: '#3d7a4f', textTransform: 'uppercase', opacity: 0.9
-                }}>
-                  {feature.eyebrow}
+              <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem', flex: 1 }}>
+                <div style={{ marginBottom: '1rem' }}>
+                  {getIcon(i)}
                 </div>
                 
                 <h3 style={{ 
-                  fontWeight: 900, fontSize: '1.75rem', letterSpacing: '-0.01em', 
-                  color: theme.text, textTransform: 'uppercase', margin: 0,
-                  lineHeight: 1.1
+                  fontWeight: 800, fontSize: '1.25rem', letterSpacing: '0', 
+                  color: theme.text, textTransform: 'uppercase', margin: '0 0 1rem 0',
+                  lineHeight: 1.3
                 }}>
                   {feature.title}
                 </h3>
                 
-                <div style={{ margin: 0 }}>
+                <div style={{ margin: '0 0 2rem 0', flex: 1 }}>
                   {Array.isArray(feature.desc) ? (
                     <ul style={{ 
-                      fontSize: '0.95rem', color: theme.subtext, lineHeight: 1.6, 
-                      margin: 0, paddingLeft: '1.1rem', maxWidth: '95%',
+                      fontSize: '0.9rem', color: theme.subtext, lineHeight: 1.6, 
+                      margin: 0, paddingLeft: '1.1rem',
                       listStyleType: 'disc'
                     }}>
                       {feature.desc.map((item, idx) => (
-                        <li key={idx} style={{ marginBottom: '0.5rem' }}>{item}</li>
+                        <li key={idx} style={{ marginBottom: '0.25rem' }}>{item}</li>
                       ))}
                     </ul>
                   ) : (
                     <p style={{ 
-                      fontSize: '0.95rem', color: theme.subtext, lineHeight: 1.6, 
-                      margin: 0, maxWidth: '95%' 
+                      fontSize: '0.9rem', color: theme.subtext, lineHeight: 1.6, 
+                      margin: 0
                     }}>
                       {feature.desc}
                     </p>
@@ -92,15 +101,14 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
                 <a 
                   href="#enquiry" 
                   style={{ 
-                    display: 'inline-flex', alignItems: 'center', gap: '8px',
-                    fontSize: '0.75rem', fontWeight: 900, color: '#3d7a4f', 
-                    textDecoration: 'none', marginTop: '0.5rem', letterSpacing: '0.1em',
-                    textTransform: 'uppercase'
+                    display: 'inline-block',
+                    fontSize: '0.8rem', fontWeight: 800, color: '#285c3b', 
+                    textDecoration: 'none', letterSpacing: '0.05em',
+                    textTransform: 'uppercase', marginTop: 'auto'
                   }}
                   className="why-cta"
                 >
-                  {feature.cta} 
-                  <span style={{ transition: 'transform 0.3s ease', fontSize: '1.2rem', lineHeight: 1 }}>→</span>
+                  {feature.cta}
                 </a>
               </div>
             </div>
@@ -109,16 +117,21 @@ export default function WhyUsSection({ theme, features, showGridPattern }) {
       </div>
 
       <style>{`
+        .why-card:hover {
+          transform: translateY(-5px);
+        }
         .why-card:hover .why-image {
           transform: scale(1.03);
         }
-        .why-cta:hover span {
-          transform: translateX(6px);
-        }
         @media (max-width: 1024px) {
            div[style*="gridTemplateColumns"] {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 2rem !important;
+          }
+        }
+        @media (max-width: 768px) {
+           div[style*="gridTemplateColumns"] {
             grid-template-columns: 1fr !important;
-            gap: 4rem !important;
           }
         }
       `}</style>

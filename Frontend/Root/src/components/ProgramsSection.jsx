@@ -6,12 +6,12 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
 
   return (
     <section id={id} className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} 
-      style={{ padding: '6rem 1rem', background: sectionBg, position: 'relative' }}>
+      style={{ padding: isCorp ? '4.5rem 1rem' : '6rem 1rem', background: sectionBg, position: 'relative' }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-        <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+      <div style={{ maxWidth: isCorp ? '1200px' : '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
+        <div style={{ textAlign: 'center', marginBottom: isCorp ? '3.5rem' : '5rem' }}>
           <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
+            fontSize: isCorp ? 'clamp(1.5rem, 3.5vw, 2.2rem)' : 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 900,
             lineHeight: 1.15, letterSpacing: '-0.02em', color: theme.text,
           }}>
             {title}
@@ -196,8 +196,8 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           .corp-layout { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
-            gap: 2.5rem; 
-            padding: 4rem 0 2rem;
+            gap: 2rem; 
+            padding: 3rem 0 1.5rem;
             align-items: start;
           }
 
@@ -211,7 +211,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           /* Staggered offset for middle card */
           @media (min-width: 901px) {
             .corp-card:nth-child(2) {
-              transform: translateY(-3.5rem);
+              transform: translateY(-2.5rem);
             }
           }
 
@@ -220,7 +220,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
             aspect-ratio: 1 / 1.1;
             border-radius: 0.25rem;
             overflow: hidden;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
           }
           .corp-img-box img {
@@ -250,7 +250,7 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           }
 
           .corp-card h3 {
-            font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
             font-weight: 800;
             letter-spacing: -0.02em;
             line-height: 1.2;
@@ -259,9 +259,9 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
           }
           .corp-card p {
             color: ${theme.subtext};
-            line-height: 1.75;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            line-height: 1.7;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
             opacity: 0.9;
           }
 
