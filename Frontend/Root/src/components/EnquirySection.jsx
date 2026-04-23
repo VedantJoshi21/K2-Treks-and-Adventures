@@ -5,18 +5,44 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
   const [formData, setFormData] = useState({
     name: '', email: '', phone: '', trek: '', message: '', date: '',
   });
-  const [formStatus, setFormStatus] = useState(null); // 'success' | null
+  const [formStatus, setFormStatus] = useState(null); // 'loading' | 'success' | 'error' | null
 
   const handleFormChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // No backend yet — simulate success
-    setFormStatus('success');
-    setFormData({ name: '', email: '', phone: '', trek: '', message: '', date: '' });
-    setTimeout(() => setFormStatus(null), 5000);
+    setFormStatus('loading');
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "cbb9eed9-3cde-424c-8ae8-20d90c03debc",
+          subject: `New Trek Enquiry: ${formData.trek} from ${formData.name}`,
+          from_name: "K2 Treks & Adventures Enquiry",
+          ...formData
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', phone: '', trek: '', message: '', date: '' });
+        setTimeout(() => setFormStatus(null), 8000);
+      } else {
+        setFormStatus('error');
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -36,7 +62,7 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           </p>
         </div>
 
-        {/* Success Message */}
+        {/* Form Messages */}
         {formStatus === 'success' && (
           <div style={{
             background: '#faf2ee', border: '1px solid #3d7a4f',
@@ -46,6 +72,18 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           }}>
             <CheckIcon />
             <span style={{ fontWeight: 600 }}>Enquiry submitted! We'll reach out within 24 hours.</span>
+          </div>
+        )}
+
+        {formStatus === 'error' && (
+          <div style={{
+            background: '#fee2e2', border: '1px solid #dc2626',
+            borderRadius: '1rem', padding: '1.25rem 1.75rem',
+            display: 'flex', alignItems: 'center', gap: '12px',
+            marginBottom: '2rem', color: '#991b1b',
+          }}>
+            <span style={{ fontSize: '20px' }}>⚠️</span>
+            <span style={{ fontWeight: 600 }}>Something went wrong. Please try again or contact us directly.</span>
           </div>
         )}
 
@@ -211,19 +249,46 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
           <button
             type="submit"
             id="enquiry-submit-btn"
+            disabled={formStatus === 'loading'}
             style={{
               width: '100%', padding: '15px',
-              background: '#3d7a4f', color: '#faf2ee',
+              background: formStatus === 'loading' ? '#6b9e7b' : '#3d7a4f',
+              color: '#faf2ee',
               border: 'none', borderRadius: '10px',
-              fontWeight: 800, fontSize: '1rem', cursor: 'pointer',
+              fontWeight: 800, fontSize: '1rem',
+              cursor: formStatus === 'loading' ? 'not-allowed' : 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
               transition: 'background 0.2s, transform 0.15s',
               boxShadow: '0 4px 20px rgba(61,122,79,0.35)',
+              opacity: formStatus === 'loading' ? 0.8 : 1,
             }}
-            onMouseEnter={e => { e.currentTarget.style.background = '#2d5c3b'; e.currentTarget.style.transform = 'scale(1.01)'; }}
-            onMouseLeave={e => { e.currentTarget.style.background = '#3d7a4f'; e.currentTarget.style.transform = 'scale(1)'; }}
+            onMouseEnter={e => {
+              if (formStatus !== 'loading') {
+                e.currentTarget.style.background = '#2d5c3b';
+                e.currentTarget.style.transform = 'scale(1.01)';
+              }
+            }}
+            onMouseLeave={e => {
+              if (formStatus !== 'loading') {
+                e.currentTarget.style.background = '#3d7a4f';
+                e.currentTarget.style.transform = 'scale(1)';
+              }
+            }}
           >
-            <SendIcon /> Submit Enquiry
+            {formStatus === 'loading' ? (
+              <>
+                <span className="loading-spinner" style={{
+                  width: '18px', height: '18px', border: '2px solid #fff',
+                  borderTopColor: 'transparent', borderRadius: '50%',
+                  animation: 'spin 0.8s linear infinite'
+                }}></span>
+                Sending...
+              </>
+            ) : (
+              <>
+                <SendIcon /> Submit Enquiry
+              </>
+            )}
           </button>
         </form>
       </div>
