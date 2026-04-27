@@ -75,8 +75,8 @@ export default function Navbar({
           style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: theme.text }}
         >
           <img src={logo} alt="K2 Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
-          <span style={{ fontSize: '1.3rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
-            K2 <span style={{ color: '#3d7a4f' }}>Treks & Adventures</span>
+          <span className="nav-logo-text" style={{ fontSize: '1.3rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
+            K2 <span className="nav-logo-suffix" style={{ color: '#3d7a4f' }}>Treks & Adventures</span>
           </span>
         </Link>
 

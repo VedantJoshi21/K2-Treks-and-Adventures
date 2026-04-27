@@ -31,7 +31,7 @@ export default function TrekCard({ trek, darkMode }) {
           onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}
           onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
         />
-        <div style={{
+        <div className="trek-card-tags" style={{
           position: 'absolute', top: '12px', right: '12px',
           display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'flex-end',
         }}>

@@ -18,7 +18,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
   return (
     <>
       {/* Hero Section */}
-      <section style={{ position: 'relative', height: '90vh', width: '100%' }}>
+      <section className="trek-detail-hero" style={{ position: 'relative', height: '90vh', width: '100%' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
           <motion.div 
             initial={{ scale: 1.1, filter: 'brightness(0.3)' }}
@@ -89,7 +89,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
         </div>
 
         {/* Stats Grid */}
-        <div style={{
+        <div className="trek-stats-grid" style={{
           position: 'absolute', bottom: '-120px', left: '50%', transform: 'translateX(-50%)',
           width: 'calc(100% - 3rem)', maxWidth: '1100px', zIndex: 30
         }}>
@@ -118,7 +118,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Intro Section */}
-      <section style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section className="trek-intro-section" style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
             <h2 style={{ 
@@ -161,8 +161,8 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Package Pricing */}
-      <section style={{ padding: '1rem 1.5rem', background: darkMode ? '#282828ff' : '#FFF8F0' }}>
-        <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
+      <section className="pricing-grid-section" style={{ padding: '1rem 1.5rem', background: darkMode ? '#282828ff' : '#FFF8F0' }}>
+        <div className="pricing-grid-container" style={{ maxWidth: '1440px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <h2 style={{
               fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, 
@@ -173,7 +173,7 @@ export default function KalsubaiSandhan({ darkMode, setDarkMode, theme }) {
             <p style={{ color: theme.subtext, fontSize: '0.9rem' }}>Choose the pickup that suits your location</p>
           </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.9rem' }}>
+          <div className="pricing-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.9rem' }}>
             {[
               { 
                 title: 'NAGPUR / WARDHA / AMR.', 

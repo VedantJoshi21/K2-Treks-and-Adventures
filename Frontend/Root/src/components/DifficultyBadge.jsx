@@ -8,7 +8,10 @@ export default function DifficultyBadge({ level }) {
     'Hard': 'bg-red-100 text-red-700',
   };
   return (
-    <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${colors[level] || 'bg-stone-100 text-stone-600'}`}>
+    <span 
+      className={`difficulty-badge px-2.5 py-1 rounded-full text-xs font-semibold ${colors[level] || 'bg-stone-100 text-stone-600'}`}
+      style={{ flexShrink: 0, whiteSpace: 'nowrap' }}
+    >
       {level}
     </span>
   );

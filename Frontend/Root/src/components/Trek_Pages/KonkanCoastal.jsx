@@ -18,7 +18,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
   return (
     <>
       {/* Hero Section */}
-      <section style={{ position: 'relative', height: '90vh', width: '100%' }}>
+      <section className="trek-detail-hero" style={{ position: 'relative', height: '90vh', width: '100%' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
           <motion.div 
             initial={{ scale: 1.1, filter: 'brightness(0.4)' }}
@@ -89,7 +89,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
         </div>
 
         {/* Stats Grid */}
-        <div style={{
+        <div className="trek-stats-grid" style={{
           position: 'absolute', bottom: '-120px', left: '50%', transform: 'translateX(-50%)',
           width: 'calc(100% - 3rem)', maxWidth: '1100px', zIndex: 30
         }}>
@@ -118,7 +118,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Intro Section */}
-      <section style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section className="trek-intro-section" style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
             <h2 style={{ 
@@ -174,7 +174,7 @@ export default function KonkanCoastal({ darkMode, setDarkMode, theme }) {
           }}>
             Investment <span style={{ color: '#3d7a4f' }}>for Memories</span>
           </h2>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className="pricing-grid" style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ 
               background: theme.cardBg, padding: '2.2rem', borderRadius: '2rem',
               width: '100%', maxWidth: '320px',

@@ -23,7 +23,7 @@ export default function DayaraBugyal({ darkMode, setDarkMode, theme }) {
   return (
     <>
       {/* Hero Section */}
-      <section style={{ position: 'relative', height: '90vh', width: '100%' }}>
+      <section className="trek-detail-hero" style={{ position: 'relative', height: '90vh', width: '100%' }}>
         {/* Background Image Container with Overflow Hidden */}
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
           <div style={{
@@ -77,7 +77,7 @@ export default function DayaraBugyal({ darkMode, setDarkMode, theme }) {
         </div>
 
         {/* Stats Grid */}
-        <div style={{
+        <div className="trek-stats-grid" style={{
           position: 'absolute', bottom: '-120px', left: '50%', transform: 'translateX(-50%)',
           width: 'calc(100% - 3rem)', maxWidth: '1100px', zIndex: 30
         }}>
@@ -106,7 +106,7 @@ export default function DayaraBugyal({ darkMode, setDarkMode, theme }) {
       </section>
 
       {/* Intro Section */}
-      <section style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+      <section className="trek-intro-section" style={{ padding: '10rem 1.5rem 2.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '4rem', alignItems: 'center' }}>
           <div>
             <h2 style={{ 
@@ -161,7 +161,7 @@ export default function DayaraBugyal({ darkMode, setDarkMode, theme }) {
           }}>
             Package <span style={{ color: '#3d7a4f' }}>Pricing</span>
           </h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
+          <div className="pricing-grid" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
             {[
               { title: 'Raithal to Raithal', price: '₹8,499/-', sub: 'Standard Package (4 Nights / 5 Days)' },
               { title: 'Dehradun to Dehradun', price: '₹8,999/-', sub: 'Complete package with pickup' },

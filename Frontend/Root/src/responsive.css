@@ -1,11 +1,3 @@
-/* ============================================================
-   K2 Treks & Adventures — Global Responsive Stylesheet
-   Breakpoints:
-     sm  : max-width 640px   (phones)
-     md  : max-width 768px   (large phones / small tablets)
-     lg  : max-width 1024px  (tablets / small laptops)
-   ============================================================ */
-
 /* ── Navbar ─────────────────────────────────────────────── */
 
 /* Show hamburger on mobile, hide desktop nav */
@@ -19,6 +11,36 @@
   /* Hide "Book a Trek" CTA pill in navbar on very small screens */
   .nav-cta-pill {
     display: none !important;
+  }
+  /* Hide the suffix on mobile to prevent overflow */
+  .nav-logo-suffix {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Shrink navbar logo text on very small phones */
+  .nav-logo-text {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-logo-text {
+    font-size: 1.05rem !important;
+  }
+}
+
+/* ── Trek Cards ─────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .trek-card-tags {
+    top: 8px !important;
+    right: 8px !important;
+  }
+  .trek-card-tags span {
+    font-size: 10px !important;
+    padding: 2px 8px !important;
   }
 }
 
@@ -36,19 +58,19 @@
     width: 36px !important;
     height: 36px !important;
     font-size: 14px !important;
-    left: 0.75rem !important;
+    left: 0.5rem !important;
   }
   .hero-next-btn {
     left: unset !important;
-    right: 0.75rem !important;
+    right: 0.5rem !important;
   }
 
   /* IAF badge: move below the top and reduce padding */
   .hero-iaf-badge {
-    top: 1rem !important;
-    right: 1rem !important;
-    font-size: 10px !important;
-    padding: 6px 10px !important;
+    top: 0.75rem !important;
+    right: 0.75rem !important;
+    font-size: 9px !important;
+    padding: 4px 10px !important;
   }
 
   /* Hero content text block */
@@ -58,7 +80,7 @@
 
   /* Slide dot indicators: tighten spacing */
   .hero-indicators {
-    bottom: 1rem !important;
+    bottom: 0.75rem !important;
     gap: 0.35rem !important;
   }
 
@@ -77,6 +99,8 @@
   .hero-cta-group a {
     padding: 12px 24px !important;
     font-size: 0.9rem !important;
+    width: 100%;
+    max-width: 280px;
   }
 }
 
@@ -85,6 +109,7 @@
 @media (max-width: 640px) {
   .stats-bar {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
   }
 }
 
@@ -101,6 +126,10 @@
   .about-rating-badge {
     bottom: 12px !important;
     left: 12px !important;
+    padding: 0.75rem 1rem !important;
+  }
+  .about-rating-badge div:first-child {
+    font-size: 1.25rem !important;
   }
 }
 
@@ -110,11 +139,13 @@
   /* Stack the 2-column form rows into 1 column */
   .enquiry-form-row {
     grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
   }
 
   /* Reduce form card padding */
   .enquiry-form-card {
     padding: 1.5rem 1.25rem !important;
+    border-radius: 1rem !important;
   }
 }
 
@@ -144,28 +175,30 @@
   }
 
   .treks-slider {
-    scroll-padding-inline: 0 !important;
-    padding-inline: 0 !important;
+    scroll-padding-inline: 1rem !important;
+    padding-inline: 1rem !important;
   }
 
   .treks-slide {
     flex-basis: 100% !important;
     width: 100% !important;
-    scroll-snap-align: start !important;
+    scroll-snap-align: center !important;
   }
 
   .treks-nav-btn {
-    width: 36px !important;
-    height: 36px !important;
+    width: 32px !important;
+    height: 32px !important;
     margin: 0 !important;
+    top: 50% !important;
+    background: rgba(0,0,0,0.4) !important; /* more transparent on mobile */
   }
 
   .treks-nav-btn-prev {
-    left: 0.5rem !important;
+    left: 0.25rem !important;
   }
 
   .treks-nav-btn-next {
-    right: 0.5rem !important;
+    right: 0.25rem !important;
   }
 }
 
@@ -202,6 +235,7 @@
   }
   .footer-links {
     gap: 2rem !important;
+    flex-wrap: wrap !important;
   }
   .footer-bottom {
     flex-direction: column !important;
@@ -210,12 +244,96 @@
   }
 }
 
+/* ── Trek Detail Pages ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Trek Detail Hero: Allow height to expand naturally */
+  .trek-detail-hero {
+    height: auto !important;
+    min-height: 80vh !important;
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+    display: block !important; /* Switch from flex to block to allow natural flow */
+  }
+
+  /* Inner content container: must be height auto to prevent overflow/overlap */
+  .trek-detail-hero > div:nth-child(2) {
+    height: auto !important;
+    min-height: 50vh !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  /* Stats Grid: Switch from absolute to relative to prevent overlap */
+  .trek-stats-grid {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 auto !important; /* No negative margin on mobile to be safe */
+    width: calc(100% - 2rem) !important;
+    z-index: 40 !important;
+  }
+  
+  .trek-stats-grid > div {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Intro Section: Normal padding since stats cards are in the flow */
+  .trek-intro-section {
+    padding-top: 4rem !important;
+  }
+  
+  /* Pricing Cards stacking */
+  .pricing-grid {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .trek-detail-hero h1 {
+    font-size: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .trek-detail-hero p {
+    font-size: 0.95rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .trek-stats-grid {
+    margin-top: 0 !important;
+  }
+  
+  .trek-intro-section {
+    padding-top: 2rem !important;
+  }
+}
+
+
+/* ── Reviews Slider ───────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .reviews-slider {
+    padding: 1rem 0 !important;
+    gap: 1rem !important;
+  }
+  
+  .reviews-slider > div {
+    width: 280px !important;
+    scroll-snap-align: center !important;
+  }
+}
+
 /* ── General Section Padding ─────────────────────────────── */
 
 @media (max-width: 640px) {
   .section-pad {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
 }
 
