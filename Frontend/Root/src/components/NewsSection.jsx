@@ -51,13 +51,7 @@ export default function NewsSection({ theme, darkMode, showGridPattern }) {
           }}>
             <span style={{ color: '#3d7a4f' }}>K2 Treks & Adventures</span> in the <span style={{ color: '#3d7a4f', fontStyle: 'italic' }}>Headlines..</span>
           </h2>
-          <div style={{ 
-            width: '80px', 
-            height: '4px', 
-            background: '#3d7a4f', 
-            margin: '0 auto',
-            borderRadius: '2px'
-          }}></div>
+
         </div>
 
         {/* Artistic Mosaic Grid with Unified Tighter Spacing */}
