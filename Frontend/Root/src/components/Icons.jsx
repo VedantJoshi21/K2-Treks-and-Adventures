@@ -101,3 +101,9 @@ export const FacebookIcon = () => (
     <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
+
+export const QuoteIcon = ({ className = 'w-8 h-8', style }) => (
+  <svg className={className} style={style} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.83z" />
+  </svg>
+);

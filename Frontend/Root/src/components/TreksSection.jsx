@@ -45,7 +45,7 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
   return (
     <section id="treks" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
       padding: '3.5rem 1rem',
-      background: darkMode ? '#282828ff' : '#FFF8F0',
+      background: theme.bg,
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>

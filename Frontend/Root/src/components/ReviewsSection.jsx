@@ -23,7 +23,7 @@ export default function ReviewsSection({ theme, darkMode, reviews, showGridPatte
 
   return (
     <section id="reviews" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '3.5rem 1rem', background: darkMode ? '#282828ff' : '#faf2ee',
+      padding: '3.5rem 1rem', background: theme.bg,
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>

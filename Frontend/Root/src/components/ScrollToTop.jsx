@@ -5,14 +5,21 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // If there is no hash, scroll to top
+    // Force scroll to top immediately on mount/refresh
     if (!hash) {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
     } else {
       // If there is a hash, scroll to that element
       const element = document.getElementById(hash.replace("#", ""));
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        // Delay slightly to ensure content is rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 10);
       }
     }
   }, [pathname, hash]);

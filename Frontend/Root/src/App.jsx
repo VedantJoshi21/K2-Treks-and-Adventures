@@ -13,6 +13,11 @@ import DayaraBugyal from './components/Trek_Pages/DayaraBugyal';
 import Navbar from './components/Navbar';
 import { getTheme } from './components/theme';
 
+// Ensure page starts at top on reload and prevent browser scroll restoration
+if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
@@ -22,11 +27,6 @@ function App() {
     const timer = window.setTimeout(() => {
       setIsLoading(false);
     }, 1200);
-
-    // Ensure page starts at top on reload
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
 
     return () => window.clearTimeout(timer);
   }, []);
@@ -39,7 +39,11 @@ function App() {
 
   useEffect(() => {
     if (!isLoading) {
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
     }
   }, [isLoading]);
 

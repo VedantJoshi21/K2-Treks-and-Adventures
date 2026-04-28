@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
+import FounderSection from './FounderSection';
 import WhyUsSection from './WhyUsSection';
 import TreksSection from './TreksSection';
 import ProgramsSection from './ProgramsSection';
 import ReviewsSection from './ReviewsSection';
 import EnquirySection from './EnquirySection';
 import ContactSection from './ContactSection';
+import NewsSection from './NewsSection';
 import Footer from './Footer';
 
 import {
@@ -52,7 +54,9 @@ export default function HomePage({ darkMode, setDarkMode, theme }) {
         variant="corporate"
       />
       <AboutSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
+      <FounderSection theme={theme} darkMode={darkMode} showGridPattern="ltr" />
       <WhyUsSection theme={theme} features={whyUsFeatures} showGridPattern="ltr" />
+      <NewsSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <ReviewsSection theme={theme} darkMode={darkMode} reviews={reviews} showGridPattern="rtl" />
       <EnquirySection
         theme={theme}
