@@ -96,13 +96,12 @@ export default function FounderSection({ theme, darkMode, showGridPattern }) {
           {/* Founder Content */}
           <div>
             <h2 style={{
-              fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', 
+              fontSize: 'clamp(2.25rem, 6vw, 3.5rem)', 
               fontWeight: 900,
               lineHeight: 1.1, 
-              marginBottom: '1.5rem', 
-              letterSpacing: '-0.02em',
-              color: theme.text,
-              fontFamily: "'Playfair Display', serif"
+              marginBottom: '1rem', 
+              letterSpacing: '-0.04em',
+              color: theme.text
             }}>
               Meet Our <span style={{ color: '#3d7a4f' }}>Founder</span>
             </h2>
