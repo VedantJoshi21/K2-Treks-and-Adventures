@@ -374,7 +374,7 @@ export default function ValleyOfFlowers({ darkMode, setDarkMode, theme }) {
               <div>
                 <div style={{ fontWeight: 800, fontSize: '0.9rem', marginBottom: '1rem', color: '#3d7a4f' }}>PREPARATION TIPS</div>
                 <p style={{ fontSize: '0.9rem', color: currentTheme.subtext, lineHeight: 1.6 }}>
-                  High altitude acclimatization is key. Build your stamina with cardio exercises at least 15 days prior. Keep yourself hydrated and avoid alcohol during the trek.
+                  High altitude Adaptation is key. Build your stamina with cardio exercises at least 15 days prior. Keep yourself hydrated and avoid alcohol during the trek.
                 </p>
               </div>
             </div>

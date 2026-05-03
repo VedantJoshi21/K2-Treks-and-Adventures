@@ -103,21 +103,21 @@ export const corporatePrograms = [
     title: "Corporate Outbound",
     desc: "Structured leadership and team-building programs for corporate groups. Build trust, communication and resilience through curated outdoor challenges.",
     features: ["Custom itineraries", "Team assessment", "Post-event reports"],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+    image: "https://img.freepik.com/premium-photo/asian-indian-business-people-corporate-culture-working-office-concept-with-laptop-papers-meetings-presentations-discussions_466689-15095.jpg",
   },
   {
     icon: React.createElement(GraduationCap, { size: 48, strokeWidth: 1.5 }),
     title: "Institutional / School Programs",
     desc: "Safe, educative adventure programs for schools and colleges across India. NCC-style disciplined camps aligned with educational objectives.",
     features: ["Age-appropriate challenges", "Safety-first approach", "Certificate of completion"],
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+    image: "https://img.freepik.com/free-photo/collaborative-process-indian-business-mans-brainstorming-meeting-officediverse-team-young-people-dressed-suits-cooperating-developing-common-project_627829-13765.jpg?semt=ais_hybrid&w=740&q=80",
   },
   {
     icon: React.createElement(ShieldAlert, { size: 48, strokeWidth: 1.5 }),
     title: "Survival & Wilderness Training",
     desc: "IAF-veteran led specialized survival training for individuals seeking real-world outdoor skills under controlled, professional supervision.",
     features: ["Bushcraft skills", "Navigation training", "Emergency first aid"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b9/ASCAN_2021_Class_Wilderness_Survival_Training_%289%29.jpg",
+    image: "https://cdn.prod.website-files.com/682f203986b9b0af11061686/692a917dafa08c564101d2e5_AliBedniBugyalTrek-LohajungtoGehroliPatalviaWan-VishnuSivanandan-Indiahikes-113.jpg",
   },
 ];
 
@@ -125,15 +125,15 @@ export const programs = [
   {
     icon: React.createElement(MountainSnow, { size: 48, strokeWidth: 1.5 }),
     title: "High Altitude Mountaineering",
-    desc: "Guided expeditions to Himalayan high-altitude peaks. Expert training, acclimatization protocols, and world-class safety gear provided.",
-    features: ["Expert guides", "Equipment provided", "Acclimatization plan"],
+    desc: "Guided expeditions to Himalayan high-altitude peaks. Expert training, Adaptation protocols, and world-class safety gear provided.",
+    features: ["Expert guides", "Equipment provided", "Adaptation plan"],
     image: "https://bekkcjkhrsfqwznxidkg.supabase.co/storage/v1/object/public/blog-images/10209-769a0fe8-3e36-4270-95ab-f1dcf8517584-6651cb810322c6c9fd2bbd4d50e29b9d.jpg",
   },
   {
     icon: React.createElement(Map, { size: 48, strokeWidth: 1.5 }),
     title: "Everest Base Camp",
     desc: "Flagship trek combining cultural immersion with extreme altitude challenge, guided by experienced leaders with a strong focus on safety and pacing.",
-    features: ["Khumbu trail support", "Acclimatization guidance", "Expedition logistics"],
+    features: ["Khumbu trail support", "Adaptation guidance", "Expedition logistics"],
     image: "https://d26dp53kz39178.cloudfront.net/media/uploads/products/2_5_usGCLou.jpg",
   },
   {
@@ -193,7 +193,7 @@ export const whyUsFeatures = [
       "Professionally trained and experienced team",
       "Comprehensive risk management protocols"
     ],
-    image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&q=80&w=1200",
+    image: "https://thumbs.dreamstime.com/b/overhead-shot-adventure-gear-packing-outdoor-expedition-photography-trip-image-titled-contains-content-374223993.jpg",
     cta: "EXPLORE PROTOCOL"
   },
   {
@@ -205,7 +205,7 @@ export const whyUsFeatures = [
       "Medical and emergency response training",
       "Continuous professional development"
     ],
-    image: "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&q=80&w=1200",
+    image: "https://imgl.krone.at/scaled/3521368/v78ebf4/full.jpg?imop=FeatureCrop,width=630,height=356",
     cta: "MEET THE TEAM"
   },
   {
@@ -217,7 +217,7 @@ export const whyUsFeatures = [
       "Institutional program expertise",
       "Transparent billing and compliance"
     ],
-    image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=1200",
+    image: "https://iaa.edu.in/public/uploads/admin/course/gem1681291243.jpg",
     cta: "VIEW CREDENTIALS"
   },
   {
@@ -229,7 +229,7 @@ export const whyUsFeatures = [
       "Support for farmers and families",
       "Community development initiatives"
     ],
-    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=1200",
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQGFT5QqNbVBTA/article-cover_image-shrink_720_1280/B4DZZIZk7dHIAI-/0/1744971392426?e=2147483647&v=beta&t=tXZrXDGeD0l8tulq3r6fKLps-YxjdGTSVyUGBlhbx_w",
     cta: "OUR IMPACT"
   },
 ];

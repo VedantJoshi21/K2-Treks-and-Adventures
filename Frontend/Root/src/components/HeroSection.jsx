@@ -173,7 +173,19 @@ export default function HeroSection({ darkMode }) {
         color: '#faf2ee', fontSize: '14px', fontWeight: 700,
         display: 'flex', alignItems: 'center', gap: '6px',
       }}>
-        <span>✦</span> Founded by an IAF Veteran
+        <span>✦</span> Founded by a Proud IAF Veteran
+      </div>
+
+      {/* Women Entrepreneur Badge */}
+      <div className="hero-iaf-badge" style={{
+        position: 'absolute', top: '6rem', right: '2rem', zIndex: 2,
+        background: 'rgba(250, 242, 238,0.1)', backdropFilter: 'blur(8px)',
+        border: '1px solid rgba(250, 242, 238,0.2)',
+        padding: '8px 16px', borderRadius: '999px',
+        color: '#faf2ee', fontSize: '14px', fontWeight: 700,
+        display: 'flex', alignItems: 'center', gap: '6px',
+      }}>
+        <span>✦</span> Owned by Women Entrepreneur
       </div>
 
       {/* Hero Content */}

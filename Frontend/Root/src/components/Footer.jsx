@@ -76,7 +76,7 @@ export default function Footer({ theme, darkMode }) {
               marginBottom: '24px',
               maxWidth: '320px'
             }}>
-              Founded by an IAF Veteran. Bringing military-grade discipline, safety, and passion to every adventure across India.
+              Founded by a Proud IAF Veteran and Owned by a Women Enterprenuer. Bringing military-grade discipline, safety, and passion to every adventure across India.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
               {[
@@ -227,11 +227,19 @@ export default function Footer({ theme, darkMode }) {
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <span style={{ fontSize: '12px', color: theme.subtext, display: 'flex', alignItems: 'center', gap: '6px' }}>
               <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#3d7a4f' }} />
+              IAF Veteran Founded
+            </span>
+            <span style={{ fontSize: '12px', color: theme.subtext, display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#3d7a4f' }} />
+              Women Enterpreneur Owned
+            </span>
+            <span style={{ fontSize: '12px', color: theme.subtext, display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#3d7a4f' }} />
               PAN-India Operations
             </span>
             <span style={{ fontSize: '12px', color: theme.subtext, display: 'flex', alignItems: 'center', gap: '6px' }}>
               <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#3d7a4f' }} />
-              IAF Veteran Owned
+              Active on GeM
             </span>
           </div>
         </div>

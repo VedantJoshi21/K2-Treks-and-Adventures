@@ -125,13 +125,12 @@ export default function EnquirySection({ theme, darkMode, sahyadriTreks, himalay
             </div>
             <div>
               <label style={{ display: 'block', fontWeight: 600, fontSize: '14px', marginBottom: '6px', color: theme.text }}>
-                Email Address *
+                Email Address <span style={{ fontWeight: 400, color: theme.subtext }}>(optional)</span>
               </label>
               <input
                 id="field-email"
                 name="email"
                 type="email"
-                required
                 placeholder="you@example.com"
                 value={formData.email}
                 onChange={handleFormChange}
