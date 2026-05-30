@@ -56,6 +56,7 @@ function App() {
   const navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'Our Treks', href: '#treks' },
+    { label: 'Upcoming Events', href: '#upcoming' },
     { label: 'Speicalized Programs', href: '#programs' },
     { label: 'Corporate Trainings', href: '#corporate' },
     { label: 'Our Story', href: '#about' },

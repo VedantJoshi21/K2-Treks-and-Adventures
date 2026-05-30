@@ -154,34 +154,105 @@ export const programs = [
 
 export const reviews = [
   {
-    name: "Aarav Mehta",
-    date: "March 2026",
+    name: "Bharath Raj",
+    date: "2 months ago",
     rating: 5,
-    trek: "Harishchandragad Fort Trek",
-    text: "The K2 Treks team was absolutely brilliant. Disciplined, punctual, and extremely safety-conscious. The night sky from the fort top was something I will never forget.",
+    trek: "Chandrashila Trek",
+    text: "I recently completed the Chandrashila trek with Rakesh Kale sir. It was a fantastic experience. He arranged the trek very well. The accomdation and the food is very well in the camp."
   },
   {
-    name: "Sanya Iyer",
-    date: "February 2026",
+    name: "Narasimha",
+    date: "2 months ago",
     rating: 5,
-    trek: "Kalsubai & Sandhan Valley",
-    text: "The Sandhan Valley canyoning was intense but the K2 team made us feel secure throughout. Their expertise in rope work is top-notch. An adrenaline-pumping experience!",
+    trek: "Chopta–Chandrashila Peak",
+    text: "I recently visited Chopta–Chandrashila Peak in Uttarakhand, and the trekking experience with this agency was truly fantastic. The founder, being an Air Force veteran, is highly knowledgeable, and his expertise made our trek smooth, calm, and memorable."
   },
   {
-    name: "Vikram Malhotra",
-    date: "December 2025",
+    name: "ashwini fulzele",
+    date: "3 months ago",
     rating: 5,
-    trek: "Valley of Flowers",
-    text: "A bucket list experience! K2 Treks handled the logistics perfectly, allowing us to just soak in the beauty of the Himalayas. Our guide knew the best spots for photography.",
+    trek: "Chopta-Chandrashila Trek",
+    text: "Thank you Rakesh😊..the recent trek was awsome..great experience and amazing team..Rakesh is highly skilled and knowledgeable known with the history and everything about of the place which helps to feel and enjoy the place. Kudos to him and the team."
   },
   {
-    name: "Ananya Kulkarni",
-    date: "February 2026",
+    name: "DHIRAJ SHINGNE",
+    date: "3 months ago",
     rating: 5,
-    trek: "Ratangad Fort",
-    text: "Beautifully organized. The food at the base village was delicious and the trek leaders were very encouraging. The views from 'Nedhe' were breathtaking!",
+    trek: "Chopta-Chandrashila Trek",
+    text: "The food, accommodation, and overall arrangements were well managed even in challenging mountain conditions. The team maintained good discipline and motivated everyone throughout the journey."
   },
+  {
+    name: "Pradeep Jetti",
+    date: "3 months ago",
+    rating: 5,
+    trek: "Chopta-Chandrashila Trek",
+    text: "Mr. Rakesh Kale is well experienced person with good planning and execution. He cleanly understand and consider even small details which leads to a better experience of adventure. Adventure activities under his guidance is a entrance to world with new experience and knowledge of the nature."
+  },
+  {
+    name: "Sudeshna Kshirsagar",
+    date: "3 months ago",
+    rating: 5,
+    trek: "Chopta-Chandrashila Trek",
+    text: "Great Great Experience 👍👍 Thank you K2 TA... Next plan for Definately plan with group"
+  },
+  {
+    name: "Pratibha Ninave",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Kalsubai Trek",
+    text: "It's my first track. It is very adventurous to me and my son.proper guidence about trek activity and always available support during trek. Other vehicle and food services are good."
+  },
+  {
+    name: "Mohit Deshmukh",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Kalsubai Trek",
+    text: "Excellent experience"
+  },
+  {
+    name: "piyush kadu",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Kalsubai Trek",
+    text: "Nice adventures"
+  },
+  {
+    name: "nitumusali Kale",
+    date: "2 months ago",
+    rating: 5,
+    trek: "K2 Treks & Adventure",
+    text: "We loved the experience with the members and the organisation of K2 treks and adventure......we are excited for the next trek with our friends and family......🩷✨"
+  },
+  {
+    name: "Anuj kshirsagar",
+    date: "2 months ago",
+    rating: 5,
+    trek: "K2 Treks & Adventure",
+    text: "Great experience with k2 treks and adventur"
+  },
+  {
+    name: "Chetan Bakale",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Kalsubai Trek",
+    text: "First Trek Experience -Kalsubai⛰️ It was my first trek of life and it was truly unforgettable. It was a perfect start to my trekking journey."
+  },
+  {
+    name: "Tanmay Parkhi",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Kalsubai Trek",
+    text: "Very friendly trekking group.Loved the experience.Highly recommend them."
+  },
+  {
+    name: "mayank katiyar",
+    date: "2 months ago",
+    rating: 5,
+    trek: "Chandrashila Trek",
+    text: "Unforgettable experience, guide was professional and like friend, Mr. Rakesh kale ( our guide ) made all our moments memorable from starting to end. I personally recommend everyone to take a tour with K2 treks and adventures ……every day was planned professionally ….thank you sir for some great days ….full of memories 🥰🥰"
+  }
 ];
+
 
 export const whyUsFeatures = [
   {

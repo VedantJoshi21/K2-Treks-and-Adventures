@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
-import FounderSection from './FounderSection';
+import TeamSection from './TeamSection';
 import WhyUsSection from './WhyUsSection';
 import TreksSection from './TreksSection';
+import UpcomingEvents from './UpcomingEvents';
 import ProgramsSection from './ProgramsSection';
 import ReviewsSection from './ReviewsSection';
 import EnquirySection from './EnquirySection';
@@ -36,6 +37,11 @@ export default function HomePage({ darkMode, setDarkMode, theme }) {
         himalayanTreks={himalayanTreks}
         showGridPattern="ltr"
       />
+      <UpcomingEvents
+        theme={theme}
+        darkMode={darkMode}
+        showGridPattern="rtl"
+      />
       <ProgramsSection 
         theme={theme} 
         programs={programs} 
@@ -54,7 +60,7 @@ export default function HomePage({ darkMode, setDarkMode, theme }) {
         variant="corporate"
       />
       <AboutSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
-      <FounderSection theme={theme} darkMode={darkMode} showGridPattern="ltr" />
+      <TeamSection theme={theme} darkMode={darkMode} showGridPattern="ltr" />
       <WhyUsSection theme={theme} features={whyUsFeatures} showGridPattern="ltr" />
       <NewsSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <ReviewsSection theme={theme} darkMode={darkMode} reviews={reviews} showGridPattern="rtl" />
