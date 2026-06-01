@@ -17,13 +17,13 @@ import img13 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.53 PM
 
 const ChevronLeft = () => (
   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <path d="M15 18l-6-6 6-6"/>
+    <path d="M15 18l-6-6 6-6" />
   </svg>
 );
 
 const ChevronRight = () => (
   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <path d="M9 18l6-6-6-6"/>
+    <path d="M9 18l6-6-6-6" />
   </svg>
 );
 
@@ -47,7 +47,7 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
       if (sliderRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
         const cardWidth = sliderRef.current.firstElementChild?.offsetWidth || 300;
-        
+
         if (scrollLeft + clientWidth >= scrollWidth - 10) {
           sliderRef.current.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
@@ -73,13 +73,13 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
 
   return (
     <section id="upcoming" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{
-      padding: '4rem 1rem',
+      padding: '2rem 1rem',
       background: theme.bg,
       position: 'relative',
     }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
       <div style={{ maxWidth: '1440px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
-        
+
         {/* Section Header */}
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <h2 style={{
@@ -95,9 +95,9 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
 
         {/* Gallery Slider Wrapper */}
         <div className="upcoming-slider-shell" style={{ position: 'relative', overflow: 'hidden' }}>
-          
+
           {/* Left Arrow Button */}
-          <button 
+          <button
             onClick={() => scroll(-1)}
             className="upcoming-nav-btn upcoming-nav-btn-prev"
             style={{
@@ -120,9 +120,9 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
           >
             <ChevronLeft />
           </button>
-          
+
           {/* Right Arrow Button */}
-          <button 
+          <button
             onClick={() => scroll(1)}
             className="upcoming-nav-btn upcoming-nav-btn-next"
             style={{
@@ -163,7 +163,7 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
               to { transform: scale(1); opacity: 1; }
             }
           `}</style>
-          
+
           {/* Slides Container */}
           <div ref={sliderRef} className="upcoming-slider" style={{
             display: 'flex',
@@ -182,7 +182,7 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
                 width: '320px',
                 scrollSnapAlign: 'start',
               }}>
-                <div 
+                <div
                   onClick={() => setActiveImage(img)}
                   style={{
                     borderRadius: '1rem',
@@ -223,7 +223,7 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
 
       {/* Lightbox / Image Modal */}
       {activeImage && (
-        <div 
+        <div
           onClick={() => setActiveImage(null)}
           style={{
             position: 'fixed',
@@ -275,9 +275,9 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
           >
             &times;
           </button>
-          
+
           {/* Image Container */}
-          <div 
+          <div
             onClick={(e) => e.stopPropagation()}
             style={{
               position: 'relative',
@@ -291,15 +291,15 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
               cursor: 'default',
             }}
           >
-            <img 
-              src={activeImage} 
-              alt="Opened Event Poster" 
+            <img
+              src={activeImage}
+              alt="Opened Event Poster"
               style={{
                 display: 'block',
                 maxWidth: '100%',
                 maxHeight: '85vh',
                 objectFit: 'contain',
-              }} 
+              }}
             />
           </div>
         </div>

@@ -128,14 +128,14 @@ export default function Footer({ theme, darkMode }) {
                       fontSize: '14px',
                       transition: 'all 0.2s ease'
                     }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = theme.text;
-                      e.currentTarget.style.paddingLeft = '4px';
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = theme.subtext;
-                      e.currentTarget.style.paddingLeft = '0';
-                    }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.color = theme.text;
+                        e.currentTarget.style.paddingLeft = '4px';
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.color = theme.subtext;
+                        e.currentTarget.style.paddingLeft = '0';
+                      }}
                     >
                       {link.label}
                     </a>
@@ -159,14 +159,14 @@ export default function Footer({ theme, darkMode }) {
                       fontSize: '14px',
                       transition: 'all 0.2s ease'
                     }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.color = theme.text;
-                      e.currentTarget.style.paddingLeft = '4px';
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.color = theme.subtext;
-                      e.currentTarget.style.paddingLeft = '0';
-                    }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.color = theme.text;
+                        e.currentTarget.style.paddingLeft = '4px';
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.color = theme.subtext;
+                        e.currentTarget.style.paddingLeft = '0';
+                      }}
                     >
                       {link.label}
                     </a>
@@ -184,7 +184,7 @@ export default function Footer({ theme, darkMode }) {
                 <div style={{ color: '#3d7a4f', marginTop: '2px' }}><PhoneIcon /></div>
                 <div>
                   <div style={{ fontSize: '14px', color: theme.text, fontWeight: 600 }}>Call Us</div>
-                  <div style={{ fontSize: '14px', color: theme.subtext }}>+91 99602 83281</div>
+                  <div style={{ fontSize: '14px', color: theme.subtext }}>+91 9209548856</div>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
@@ -223,7 +223,7 @@ export default function Footer({ theme, darkMode }) {
               Safety. Discipline. Adventure.
             </p>
           </div>
-          
+
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             <span style={{ fontSize: '12px', color: theme.subtext, display: 'flex', alignItems: 'center', gap: '6px' }}>
               <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#3d7a4f' }} />

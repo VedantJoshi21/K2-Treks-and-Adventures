@@ -62,7 +62,7 @@ function App() {
     { label: 'Our Story', href: '#about' },
     { label: 'Why Us', href: '#whyus' },
     { label: 'Trekker Stories', href: '#reviews' },
-    { label: 'Book a Trek', href: '#enquiry' },
+    { label: 'Get in Touch', href: '#enquiry' },
   ];
 
   const theme = getTheme(darkMode);

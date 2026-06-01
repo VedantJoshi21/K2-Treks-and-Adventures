@@ -23,7 +23,7 @@ export default function Navbar({
     const handleScroll = () => {
       const sections = navLinks.map(link => link.href.substring(1));
       let current = '';
-      
+
       // Find the last section that has its top passed or near the top of the viewport
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -36,7 +36,7 @@ export default function Navbar({
           }
         }
       }
-      
+
       // If we're at the very top, set the first element as active
       if (window.scrollY < 50 && sections.length > 0) {
         current = sections[0];
@@ -49,7 +49,7 @@ export default function Navbar({
 
     window.addEventListener('scroll', handleScroll);
     // Add a slight delay to the initial check to make sure DOM is painted
-    setTimeout(handleScroll, 100); 
+    setTimeout(handleScroll, 100);
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navLinks, activeSection]);
@@ -64,26 +64,37 @@ export default function Navbar({
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       }}>
         {/* Logo */}
-        <Link 
-          to="/" 
-          onClick={(e) => { 
+        <Link
+          to="/"
+          onClick={(e) => {
             if (isHomePage) {
-              e.preventDefault(); 
-              window.scrollTo({ top: 0, behavior: 'smooth' }); 
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-          }} 
+          }}
           style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none', color: theme.text }}
         >
           <img src={logo} alt="K2 Logo" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
-          <span className="nav-logo-text" style={{ fontSize: '1.3rem', fontWeight: 900, letterSpacing: '-0.02em' }}>
-            K2 <span className="nav-logo-suffix" style={{ color: '#3d7a4f' }}>Treks & Adventures</span>
-          </span>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+            <span className="nav-logo-text" style={{ fontSize: '1.15rem', fontWeight: 900, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+              K2 <span style={{ color: '#3d7a4f' }}>Treks &</span>
+            </span>
+            <span className="nav-logo-suffix" style={{ fontSize: '1.15rem', fontWeight: 900, color: '#3d7a4f', letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}>
+              Adventures
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav — hidden on mobile via .nav-desktop-links class */}
         <div
           className="nav-desktop-links"
-          style={{ display: 'flex', gap: '1.75rem', alignItems: 'center' }}
+          style={{
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            flex: 1,
+            margin: '0 1.25rem'
+          }}
         >
           {navLinks.map(link => {
             const linkId = link.href.substring(1);
@@ -95,10 +106,11 @@ export default function Navbar({
                 to={to}
                 className={`nav-link ${isActive ? 'active' : ''}`}
                 style={{
-                  color: isActive ? '#3d7a4f' : theme.subtext, 
-                  textDecoration: 'none', 
-                  fontWeight: isActive ? 600 : 500, 
+                  color: isActive ? '#3d7a4f' : theme.subtext,
+                  textDecoration: 'none',
+                  fontWeight: isActive ? 600 : 500,
                   fontSize: '0.9rem',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {link.label}
@@ -167,11 +179,11 @@ export default function Navbar({
                 key={link.label}
                 to={to}
                 onClick={() => setMobileMenuOpen(false)}
-                style={{ 
-                  color: isActive ? '#3d7a4f' : theme.text, 
-                  textDecoration: 'none', 
-                  fontWeight: isActive ? 700 : 600, 
-                  fontSize: '1.1rem' 
+                style={{
+                  color: isActive ? '#3d7a4f' : theme.text,
+                  textDecoration: 'none',
+                  fontWeight: isActive ? 700 : 600,
+                  fontSize: '1.1rem'
                 }}
               >
                 {link.label}
@@ -190,9 +202,9 @@ export default function Navbar({
               marginTop: '0.5rem',
             }}
           >
-            Book a Trek
+            Get in Touch
           </a>
-          
+
           {/* Social Icons Mobile */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '1rem' }}>
             <a href="#" style={{ color: theme.text }}><InstagramIcon /></a>
