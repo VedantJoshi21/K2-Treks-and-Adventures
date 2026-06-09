@@ -64,7 +64,7 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
       quote: "True leadership is forged in the mountains, where preparation, courage, and teamwork matter most.",
       stats: [
         { label: '8,000m Peaks', value: '1' },
-        { label: 'Search & Rescues', value: '50+' }
+        // { label: 'Search & Rescues', value: '50+' }
       ],
       layout: 'image-left'
     },
