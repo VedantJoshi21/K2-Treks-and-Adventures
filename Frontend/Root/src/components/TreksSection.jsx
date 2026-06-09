@@ -139,7 +139,7 @@ export default function TreksSection({ theme, darkMode, activeTab, setActiveTab,
             scrollBehavior: 'smooth',
             padding: '1rem 0 2rem',
             WebkitOverflowScrolling: 'touch',
-            touchAction: 'pan-x',
+            touchAction: 'pan-y',
             overscrollBehaviorX: 'contain',
           }}>
             {treksToDisplay.map(trek => (

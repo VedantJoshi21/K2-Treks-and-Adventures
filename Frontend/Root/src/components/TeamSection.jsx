@@ -108,16 +108,16 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
   ];
 
   return (
-    <section id="team" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '6rem 1rem', background: theme.bg }}>
+    <section id="team" className={`section-pad ${showGridPattern ? 'grid-wrapper' : ''}`} style={{ padding: '0rem 1rem 5rem 1rem', background: theme.bg }}>
       {showGridPattern && <div className={`grid-background ${showGridPattern === 'ltr' ? 'pattern-ltr' : 'pattern-rtl'}`}></div>}
-      
+
       <div style={{ maxWidth: '1250px', margin: '0 auto', position: 'relative', zIndex: 10 }}>
         {/* Section Heading */}
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <h2 style={{
-            fontSize: 'clamp(2.5rem, 7vw, 4rem)', 
+            fontSize: 'clamp(2.5rem, 7vw, 4rem)',
             fontWeight: 900,
-            lineHeight: 1.1, 
+            lineHeight: 1.1,
             letterSpacing: '-0.04em',
             color: theme.text,
           }}>
@@ -129,24 +129,24 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
         </div>
 
         {/* Team Members List */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}>
           {teamMembers.map((member, index) => (
-            <div 
+            <div
               key={member.id}
-              className="team-member-grid" 
-              style={{ 
-                display: 'grid', 
-                gridTemplateColumns: member.layout === 'image-left' ? '0.8fr 1.2fr' : '1.2fr 0.8fr', 
-                gap: 'clamp(3rem, 6vw, 8rem)', 
-                alignItems: 'center' 
+              className="team-member-grid"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: member.layout === 'image-left' ? '0.8fr 1.2fr' : '1.2fr 0.8fr',
+                gap: 'clamp(3rem, 6vw, 8rem)',
+                alignItems: 'center'
               }}
             >
               {/* Image Column */}
-              <div className="team-img-col" style={{ 
+              <div className="team-img-col" style={{
                 order: member.layout === 'image-left' ? 1 : 2,
-                position: 'relative', 
-                width: '100%', 
-                height: '100%', 
+                position: 'relative',
+                width: '100%',
+                height: '100%',
                 minHeight: '300px',
                 display: 'flex',
                 alignItems: 'stretch'
@@ -160,16 +160,16 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
                   zIndex: 2,
                   border: `1px solid ${darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)'}`
                 }}>
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    style={{ 
-                      width: '100%', 
-                      height: '100%', 
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
                       objectFit: 'cover',
                       display: 'block',
                       filter: darkMode ? 'contrast(1.1) brightness(0.85)' : 'none'
-                    }} 
+                    }}
                   />
                   <div style={{
                     position: 'absolute',
@@ -178,7 +178,7 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
                     zIndex: 3
                   }}></div>
                 </div>
-                
+
                 {/* Decorative background accent */}
                 <div style={{
                   position: 'absolute',
@@ -196,23 +196,23 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
               {/* Content Column */}
               <div style={{ order: member.layout === 'image-left' ? 2 : 1 }}>
                 <h3 style={{
-                  fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', 
+                  fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
                   fontWeight: 900,
-                  lineHeight: 1.1, 
-                  marginBottom: '1rem', 
+                  lineHeight: 1.1,
+                  marginBottom: '1rem',
                   letterSpacing: '-0.02em',
                   color: theme.text
                 }}>
                   {member.role === 'Founder' ? 'Our ' : 'Our '}<span style={{ color: '#3d7a4f' }}>{member.role}</span>
                 </h3>
-                
+
                 <div style={{ marginBottom: '2rem' }}>
                   {member.description.map((para, i) => (
-                    <p key={i} style={{ 
-                      color: theme.subtext, 
-                      lineHeight: 1.7, 
+                    <p key={i} style={{
+                      color: theme.subtext,
+                      lineHeight: 1.7,
                       fontSize: 'clamp(1rem, 2vw, 1.1rem)',
-                      marginBottom: '1.25rem' 
+                      marginBottom: '1.25rem'
                     }}>
                       {para}
                     </p>
@@ -220,24 +220,24 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
                 </div>
 
                 {/* Quote */}
-                <div style={{ 
-                  position: 'relative', 
-                  paddingLeft: '2.5rem', 
+                <div style={{
+                  position: 'relative',
+                  paddingLeft: '2.5rem',
                   marginBottom: '2.5rem',
                   borderLeft: `4px solid ${member.accentColor}`
                 }}>
-                  <QuoteIcon style={{ 
-                    position: 'absolute', 
-                    top: '-10px', 
-                    left: '10px', 
-                    opacity: 0.1, 
-                    width: '60px', 
+                  <QuoteIcon style={{
+                    position: 'absolute',
+                    top: '-10px',
+                    left: '10px',
+                    opacity: 0.1,
+                    width: '60px',
                     height: '60px',
                     color: member.accentColor
                   }} />
-                  <blockquote style={{ 
-                    fontSize: 'clamp(1.1rem, 3vw, 1.25rem)', 
-                    fontWeight: 700, 
+                  <blockquote style={{
+                    fontSize: 'clamp(1.1rem, 3vw, 1.25rem)',
+                    fontWeight: 700,
                     fontStyle: 'italic',
                     color: theme.text,
                     lineHeight: 1.4,
@@ -245,10 +245,10 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
                   }}>
                     "{member.quote}"
                   </blockquote>
-                  <cite style={{ 
-                    fontSize: '0.85rem', 
-                    fontWeight: 600, 
-                    textTransform: 'uppercase', 
+                  <cite style={{
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
                     letterSpacing: '0.1em',
                     color: theme.subtext,
                     fontStyle: 'normal'
@@ -258,9 +258,9 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
                 </div>
 
                 {/* Stats */}
-                <div className="member-stats" style={{ 
-                  display: 'flex', 
-                  gap: 'clamp(1.5rem, 4vw, 3rem)', 
+                <div className="member-stats" style={{
+                  display: 'flex',
+                  gap: 'clamp(1.5rem, 4vw, 3rem)',
                   borderTop: `1px solid ${theme.border}`,
                   paddingTop: '2rem'
                 }}>
