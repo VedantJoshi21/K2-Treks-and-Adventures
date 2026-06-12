@@ -1,17 +1,16 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-// Import all images from assets/June and July Events directories
-import img2 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.49 PM (1).jpeg';
-import img3 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.49 PM (2).jpeg';
+// Import June Events (excluding those with start/end dates prior to 12 June)
 import img4 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.49 PM.jpeg';
 import img5 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.50 PM (1).jpeg';
-import img8 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.51 PM (2).jpeg';
 import img9 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.51 PM.jpeg';
 import img12 from '../assets/June Events/WhatsApp Image 2026-05-29 at 7.18.52 PM.jpeg';
 
-// Import July Events (excluding duplicate files)
-import julyImg1 from '../assets/July Events/WhatsApp Image 2026-06-05 at 11.33.57 AM.jpeg';
-import julyImg2 from '../assets/July Events/WhatsApp Image 2026-06-05 at 11.33.57 AM (1).jpeg';
+// Import July Events (all events from assets/July Events directory)
+import julyImg1 from '../assets/July Events/1.jpeg';
+import julyImg2 from '../assets/July Events/2.jpeg';
+import julyImg3 from '../assets/July Events/3.jpeg';
+import julyImg4 from '../assets/July Events/4.jpeg';
 
 const ChevronLeft = () => (
   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -27,7 +26,7 @@ const ChevronRight = () => (
 
 /**
  * UpcomingEvents Component
- * Renders a horizontal auto-scrolling gallery of event poster cards for upcoming events in June.
+ * Renders a horizontal auto-scrolling gallery of event poster cards for upcoming events in June & July.
  * Allows visitors to click any card to view the event poster in a premium full-screen lightbox modal.
  * 
  * @param {Object} props
@@ -38,7 +37,7 @@ const ChevronRight = () => (
 export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
   const sliderRef = useRef(null);
   const [activeImage, setActiveImage] = useState(null);
-  const images = [img2, img3, img4, img5, img8, img9, img12, julyImg1, julyImg2];
+  const images = [img4, img5, img9, img12, julyImg1, julyImg2, julyImg3, julyImg4];
 
   useEffect(() => {
     const interval = setInterval(() => {
