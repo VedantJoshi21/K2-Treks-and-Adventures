@@ -378,12 +378,14 @@ export default function TeamSection({ theme, darkMode, showGridPattern }) {
             margin: 0 auto;
           }
           .member-stats {
-            justify-content: flex-start;
+            justify-content: center !important;
+            text-align: center;
           }
         }
         @media (max-width: 480px) {
           .member-stats {
             flex-direction: column;
+            align-items: center;
             gap: 1.5rem !important;
           }
         }

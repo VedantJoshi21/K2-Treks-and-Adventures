@@ -61,6 +61,7 @@ function App() {
     { label: 'Corporate Trainings', href: '#corporate' },
     { label: 'Our Story', href: '#about' },
     { label: 'Why Us', href: '#whyus' },
+    { label: 'Success Stories', href: '#success-stories' },
     { label: 'Trekker Stories', href: '#reviews' },
     { label: 'Get in Touch', href: '#enquiry' },
   ];

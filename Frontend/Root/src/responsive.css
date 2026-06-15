@@ -109,13 +109,14 @@
 @media (max-width: 640px) {
   .stats-bar {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
+    gap: 1px !important;
   }
 }
 
 @media (max-width: 360px) {
   .stats-bar {
     grid-template-columns: 1fr !important;
+    gap: 1px !important;
   }
 }
 

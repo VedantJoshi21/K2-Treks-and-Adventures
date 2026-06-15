@@ -3,6 +3,7 @@ import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
 import TeamSection from './TeamSection';
 import WhyUsSection from './WhyUsSection';
+import SuccessStories from './SuccessStories';
 import TreksSection from './TreksSection';
 import UpcomingEvents from './UpcomingEvents';
 import ProgramsSection from './ProgramsSection';
@@ -62,6 +63,7 @@ export default function HomePage({ darkMode, setDarkMode, theme }) {
       <AboutSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <TeamSection theme={theme} darkMode={darkMode} showGridPattern="ltr" />
       <WhyUsSection theme={theme} features={whyUsFeatures} showGridPattern="ltr" />
+      <SuccessStories theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <NewsSection theme={theme} darkMode={darkMode} showGridPattern="rtl" />
       <ReviewsSection theme={theme} darkMode={darkMode} reviews={reviews} showGridPattern="rtl" />
       <EnquirySection
