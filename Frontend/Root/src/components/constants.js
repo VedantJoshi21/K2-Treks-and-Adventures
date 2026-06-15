@@ -1,5 +1,6 @@
 import React from 'react';
 import { Building2, GraduationCap, ShieldAlert, MountainSnow, Map, Snowflake, Compass } from 'lucide-react';
+import institutionalProgramImg from '../assets/Institutional Program.jpeg';
 
 export const sahyadriTreks = [
   {
@@ -110,7 +111,7 @@ export const corporatePrograms = [
     title: "Institutional / School Programs",
     desc: "Safe, educative adventure programs for schools and colleges across India. NCC-style disciplined camps aligned with educational objectives.",
     features: ["Age-appropriate challenges", "Safety-first approach", "Certificate of completion"],
-    image: "https://img.freepik.com/free-photo/collaborative-process-indian-business-mans-brainstorming-meeting-officediverse-team-young-people-dressed-suits-cooperating-developing-common-project_627829-13765.jpg?semt=ais_hybrid&w=740&q=80",
+    image: institutionalProgramImg,
   },
   {
     icon: React.createElement(ShieldAlert, { size: 48, strokeWidth: 1.5 }),

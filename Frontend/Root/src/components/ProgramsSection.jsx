@@ -316,9 +316,6 @@ export default function ProgramsSection({ theme, programs, id = "programs", titl
                     {prog.image && <img src={prog.image} alt={prog.title} loading="lazy" />}
                   </div>
                   <div className="corp-content-box">
-                    <div className="corp-eyebrow">
-                      {String(i + 1).padStart(2, '0')} / {categoryLabel}
-                    </div>
                     <h3>{prog.title}</h3>
                     <p>{prog.desc}</p>
                     <a href="#enquiry" className="corp-cta">
