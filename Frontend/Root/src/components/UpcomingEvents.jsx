@@ -5,18 +5,19 @@ import React, { useRef, useEffect, useState } from 'react';
 // Import July Events (all events from assets/July Events directory)
 import julyImg1 from '../assets/July Events/1.jpeg';
 import julyImg2 from '../assets/July Events/2.jpeg';
-import julyImg3 from '../assets/July Events/3.jpeg';
 import julyImg4 from '../assets/July Events/4.jpeg';
 
 // Import August Events (all events from assets/August Events directory)
-import augustImg1 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.24 PM (1).jpeg';
-import augustImg2 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.24 PM.jpeg';
-import augustImg3 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.25 PM (1).jpeg';
-import augustImg4 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.25 PM (2).jpeg';
-import augustImg5 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.25 PM (3).jpeg';
-import augustImg6 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.25 PM.jpeg';
-import augustImg7 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.26 PM (1).jpeg';
-import augustImg8 from '../assets/August Events/WhatsApp Image 2026-06-25 at 9.13.26 PM.jpeg';
+import augustImg1 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.17.15 AM.jpeg';
+import augustImg2 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.17.50 AM.jpeg';
+import augustImg3 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.18.53 AM.jpeg';
+import augustImg4 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.18.54 AM.jpeg';
+import augustImg5 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.38.45 AM.jpeg';
+import augustImg6 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.39.20 AM.jpeg';
+import augustImg7 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.42.05 AM (1).jpeg';
+import augustImg8 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.42.05 AM.jpeg';
+import augustImg9 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.54.12 AM (1).jpeg';
+import augustImg10 from '../assets/August Events/WhatsApp Image 2026-06-29 at 7.54.12 AM.jpeg';
 
 const ChevronLeft = () => (
   <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -32,7 +33,7 @@ const ChevronRight = () => (
 
 /**
  * UpcomingEvents Component
- * Renders a horizontal auto-scrolling gallery of event poster cards for upcoming events in June & July.
+ * Renders a horizontal auto-scrolling gallery of event poster cards for upcoming events in July & August.
  * Allows visitors to click any card to view the event poster in a premium full-screen lightbox modal.
  * 
  * @param {Object} props
@@ -44,8 +45,8 @@ export default function UpcomingEvents({ theme, darkMode, showGridPattern }) {
   const sliderRef = useRef(null);
   const [activeImage, setActiveImage] = useState(null);
   const images = [
-    julyImg1, julyImg2, julyImg3, julyImg4,
-    augustImg1, augustImg2, augustImg3, augustImg4, augustImg5, augustImg6, augustImg7, augustImg8
+    julyImg1, julyImg2, julyImg4,
+    augustImg1, augustImg2, augustImg3, augustImg4, augustImg5, augustImg6, augustImg7, augustImg8, augustImg9, augustImg10
   ];
 
   useEffect(() => {
